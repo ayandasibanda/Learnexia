@@ -11,9 +11,10 @@ class User(BaseModel):
     
     __tablename__ = 'user'
 
+    id = Column(Integer, primary_key=True)
+    email = Column(String(128),unique=True, nullable=False)
     firstname = Column(String(128), nullable=False)
     lastname = Column(String(128), nullable=False)
-    email = Column(String(128), nullable=False)
     phone_number = Column(String(60), nullable=True)
     password = Column(String(128), nullable=False)
     category = Column(String(128), nullable=False)
