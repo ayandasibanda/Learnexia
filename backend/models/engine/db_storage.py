@@ -3,7 +3,10 @@
 
 import os
 from sqlalchemy import MetaData, create_engine
+from dotenv import load_dotenv
 from models.base_model import Base
+
+load_dotenv()
 
 
 class DBStorage():
@@ -13,13 +16,13 @@ class DBStorage():
 
     def __init__(self):
         """Instantiates an sql session"""
-        username = ''
-        dbname = ''
-        host = ''
-        passwd = ''
+        username = os.getenv("DB_USER")
+        dbname = os.getenv("DB_NAME")
+        host = os.getenv("DB_HOST")
+        passwd = os.getenv("DB_PASSWD")
 
         self.__engine = create_engine(
-            'mysql+mysql://{}:{}@{}/{}'.format(
+            'mysql+mysqldb://{}:{}@{}/{}'.format(
                 username,
                 passwd,
                 host,
@@ -37,6 +40,10 @@ class DBStorage():
         Session = scoped_session(session_factory)
 
         self.__session = Session()
+    
+    def save(self):
+        """Commits the current session"""
+        self.__session.commit()
     
     def close(self):
         """Removes current session"""
