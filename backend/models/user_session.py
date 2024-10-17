@@ -3,11 +3,11 @@
 """ UserSession module.
 """
 
-from models.base_model import BaseModel
+from models.base_model import BaseModel, Base
 from sqlalchemy import String, Column, ForeignKey
 
 
-class UserSession(BaseModel):
+class UserSession(BaseModel, Base):
     """ UserSession class.
     """
     __tablename__ = 'sessions'

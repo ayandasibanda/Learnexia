@@ -3,12 +3,8 @@
 
 from datetime import datetime
 from sqlalchemy.ext.declarative import declarative_base
-import os
-from models import storage
 from uuid import uuid4 as uid
 from sqlalchemy import String, Column, DateTime
-
-storage_type = os.environ["HBNB_TYPE_STORAGE"]
 
 Base = declarative_base()
 
@@ -59,6 +55,7 @@ class BaseModel():
 
     def save(self):
         """updates the attribute 'updated_at' with the current datetime"""
+        from models import storage
         self.updated_at = datetime.utcnow()
         storage.new(self)
         storage.save()
@@ -80,4 +77,5 @@ class BaseModel():
 
     def delete(self):
         """delete the current instance from the storage"""
+        from models import storage
         storage.delete(self)

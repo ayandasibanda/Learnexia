@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """ Enrollment class """
 
-from models.base_model import BaseModel
+from models.base_model import BaseModel, Base
 from sqlalchemy import ForeignKey, String, Column
 
 
-class Enrollment(BaseModel):
+class Enrollment(BaseModel, Base):
     """ Attributes and methods for our class
     Attributes:
         name, description, duration, enrolled"""

@@ -3,9 +3,8 @@
 
 from flask import Flask, jsonify, abort, request
 from api.v1.auth.session_db_auth import SessionDBAuth
-from models import storage
 from models.user import User
-from views import app_views
+from api.v1.views import app_views
 from api.v1.auth.auth import Auth
 from api.v1.auth.basic_auth import BasicAuth
 from flask_cors import (CORS, cross_origin)
@@ -19,12 +18,12 @@ auth = None
 
 auth_type = getenv('AUTH_TYPE')
 
-if auth_type == 'auth':
+""" if auth_type == 'auth':
     auth = Auth()
 elif auth_type == 'basic_auth':
     auth = BasicAuth()
 elif auth_type== "session_db_auth":
-    auth = SessionDBAuth()
+    auth = SessionDBAuth() """
 
 @app.errorhandler(404)
 def not_found(error) -> str:
@@ -48,6 +47,7 @@ def forbidden(error) -> str:
 @app.teardown_appcontext
 def close(exception):
     """Calls the close method based on the storage"""
+    from models import storage
     storage.close()
 
 
@@ -60,14 +60,13 @@ def handle_404_error(ex):
 def before_request_func() -> None:
     """ Function executed before any request """
     if auth:
-        excluded_paths = ['/api/v1/status/',
-                          '/api/v1/unauthorized/',
-                          '/api/v1/forbidden/', 
-                          '/api/v1/auth_session/login/']
+        excluded_paths = ['/api/v1/unauthorized/',
+                          '/api/v1/forbidden/']
 
         if not auth.require_auth(request.path, excluded_paths):
             return
         if not auth.authorization_header(request):
+            print("")
             abort(401)
         if not auth.session_cookie(request):
             abort(401)

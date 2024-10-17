@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """ Courses class """
 
-from models.base_model import BaseModel
+from models.base_model import BaseModel, Base
 from sqlalchemy import String, Column, Integer
 
 
-class Course(BaseModel):
+class Course(BaseModel, Base):
     """ Attributes and methods for our class
     Attributes:
         name, description, duration, enrolled"""

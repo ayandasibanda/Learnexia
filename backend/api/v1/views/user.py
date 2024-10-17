@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ Module of Users views
 """
-import bcrypt
+
 from api.v1.views import app_views
 from flask import abort, jsonify, request
 from models.user import User
@@ -15,8 +15,8 @@ def view_all_users() -> str:
     Return:
       - list of all User objects JSON represented
     """
-    all_users = [user.to_json() for user in User.all()]
-    return jsonify(all_users)
+    all_users = storage.all(User) #this is a dict
+    return jsonify(all_users), 200
 
 
 @app_views.route('/users/<user_id>', methods=['GET'], strict_slashes=False)
@@ -111,7 +111,7 @@ def create_user():
 def update_user(user_id: str = None) -> str:
     pass
 
-@app_views.route('/users/me', methods=['DELETE'], strict_slashes=False)
+@app_views.route('/users/me', methods=['GET'], strict_slashes=False)
 def get_authenticated_user():
     """ Retrieves an authenticated user """
     pass

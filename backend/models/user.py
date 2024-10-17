@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """My user class"""
 
-from models.base_model import BaseModel
-from sqlalchemy import Boolean, Integer, String, Column, DateTime
+from models.base_model import BaseModel, Base
+from sqlalchemy import Boolean, Integer, String, Column
 
-class User(BaseModel):
+class User(BaseModel, Base):
     """User Class
     Attributes:
         FirstName, LastName, Email, PhoneNumber, Password, Category"""

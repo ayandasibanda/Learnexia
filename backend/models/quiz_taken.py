@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """ User's taken quiz class """
 
-from models.base_model import BaseModel
+from models.base_model import BaseModel, Base
 from sqlalchemy import ForeignKey, String, Column, Integer
 
 
-class QuizAttempt(BaseModel):
+class QuizAttempt(BaseModel, Base):
     """ Attributes and methods for our class
     Attributes:
         name, description, duration, enrolled"""
