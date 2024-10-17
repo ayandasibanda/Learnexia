@@ -4,9 +4,14 @@ import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
-    name: '',
+    firstname: '',
+    lastname: '',
     email: '',
-    password: ''
+    password: '',
+    phone_number: '',
+    address: '',
+    country: '',
+    category: ''
   });
 
   const [error, setError] = useState(null);
@@ -37,19 +42,31 @@ const SignUp = () => {
 
   return (
     <div className="relative min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="relative bg-white rounded-lg shadow-lg p-8 w-full max-w-md">
+      <div className="relative bg-white rounded-lg shadow-lg p-6 m-20 w-full max-w-lg">
         <h2 className="text-3xl font-bold text-center text-green-600 mb-6">Sign Up</h2>
 
         <form className="space-y-6" onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="name" className="text-gray-700 font-medium">Name</label>
-            <input
-              type="text"
-              id="name"
-              value={formData.name}
-              onChange={handleInputChange}
-              className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400"
-            />
+          <div className="flex space-x-4">
+            <div className="w-1/2">
+              <label htmlFor="firstname" className="text-gray-700 font-medium">First Name</label>
+              <input
+                type="text"
+                id="firstname"
+                value={formData.firstname}
+                onChange={handleInputChange}
+                className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400"
+              />
+            </div>
+            <div className="w-1/2">
+              <label htmlFor="lastname" className="text-gray-700 font-medium">Last Name</label>
+              <input
+                type="text"
+                id="lastname"
+                value={formData.lastname}
+                onChange={handleInputChange}
+                className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400"
+              />
+            </div>
           </div>
 
           <div>
@@ -69,6 +86,51 @@ const SignUp = () => {
               type="password"
               id="password"
               value={formData.password}
+              onChange={handleInputChange}
+              className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400"
+            />
+          </div>
+
+          <div className="flex space-x-4">
+            <div className="w-1/2">
+              <label htmlFor="phone_number" className="text-gray-700 font-medium">Phone Number</label>
+              <input
+                type="tel"
+                id="phone_number"
+                value={formData.phone_number}
+                onChange={handleInputChange}
+                className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400"
+              />
+            </div>
+            <div className="w-1/2">
+              <label htmlFor="address" className="text-gray-700 font-medium">Address</label>
+              <input
+                type="text"
+                id="address"
+                value={formData.address}
+                onChange={handleInputChange}
+                className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label htmlFor="country" className="text-gray-700 font-medium">Country</label>
+            <input
+              type="text"
+              id="country"
+              value={formData.country}
+              onChange={handleInputChange}
+              className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="category" className="text-gray-700 font-medium">Category</label>
+            <input
+              type="text"
+              id="category"
+              value={formData.category}
               onChange={handleInputChange}
               className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400"
             />
