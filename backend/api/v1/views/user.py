@@ -2,12 +2,12 @@
 """ Module of Users views
 """
 
+import bcrypt
 from api.v1.views import app_views
 from flask import abort, jsonify, request
 from models.user import User
 from api.v1.auth.basic_auth import BasicAuth
 from models import storage
-from werkzeug.security import generate_password_hash
 
 @app_views.route('/users', methods=['GET'], strict_slashes=False)
 def view_all_users() -> str:
@@ -79,6 +79,9 @@ def create_user():
 
     if not user_info:
         abort(400, 'Missing information')
+    
+    error_msg = None
+
     for key in errors:
         if not (user_info.get(key)):
             error_msg = "Missing {}".format(key)
@@ -86,7 +89,7 @@ def create_user():
     if not error_msg:
         passwd = user_info['password']
 
-        hashed_password = generate_password_hash(passwd)
+        hashed_password = bcrypt.hashpw(passwd.encode('utf-8'), bcrypt.gensalt())
 
         user = {
             "firstname": user_info['firstname'],
@@ -104,7 +107,8 @@ def create_user():
             storage.save()
             return jsonify(new_user.to_dict()), 200
         except Exception as e:
-                error_msg = "Can't create User: {}".format(e)
+            print(e)
+            error_msg = "Can't create User: {}".format(e)
     return jsonify({'error': error_msg}), 400
 
 @app_views.route('/users/<user_id>', methods=['PUT'], strict_slashes=False)

@@ -15,7 +15,7 @@ class User(BaseModel, Base):
     lastname = Column(String(128), nullable=False)
     email = Column(String(128), nullable=False)
     phone_number = Column(String(60), nullable=True)
-    password = Column(String(128), nullable=False)
+    password = Column(String(255), nullable=False)
     category = Column(String(128), nullable=False)
     address = Column(String(128), nullable=True)
     country = Column(String(128), nullable=True)

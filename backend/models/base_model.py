@@ -43,7 +43,7 @@ class BaseModel():
                 setattr(self, 'created_at', datetime.now())
             
             if not kwargs.get('id'):
-                setattr(self, 'id', str(uid))
+                setattr(self, 'id', str(uid()))
 
             if kwargs.get('__class__'):
                 del kwargs['__class__']

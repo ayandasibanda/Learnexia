@@ -8,7 +8,7 @@ from api.v1.views import app_views
 from models.user import User
 from os import getenv
 from models import storage
-from werkzeug.security import generate_password_hash, check_password_hash
+import bcrypt
 
 
 @app_views.route('/auth_session/login', methods=['POST'], strict_slashes=False)
@@ -17,8 +17,11 @@ def login():
     Return:
       - Response
     """
-    user_email = request.form.get('email')
-    user_pwd = request.form.get('password')
+    login_data = request.get_json()
+    if not login_data:
+        abort(400, 'Missing information')
+    user_email  = login_data.get('email')
+    user_pwd = login_data.get('password')
     if not user_email:
         return jsonify(error="email missing"), 400
     if not user_pwd:
@@ -29,13 +32,17 @@ def login():
         return jsonify(error="no user found for this email"), 404
     if not user:
         return jsonify(error="no user found for this email"), 404
-    if user and check_password_hash(user.password, user_pwd):
+    if user and bcrypt.checkpw(password=user_pwd.encode('utf-8'),
+                                  hashed_password=user.password.encode('utf-8')):
         user_id = user.id
         from api.v1.app import auth
-        session_id = auth.create_session(user_id)
-        response = jsonify(user.to_json())
-        response.set_cookie(getenv('SESSION_NAME'), session_id)
-        return jsonify(response), 200
+        if auth:
+            session_id = auth.create_session(user_id)
+            response = jsonify(user.to_dict())
+            response.set_cookie(getenv('SESSION_NAME'), session_id)
+            return jsonify(response), 200
+        else:
+            return jsonify(user.to_dict()), 200
     return jsonify(error="wrong password"), 401
 
 

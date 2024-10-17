@@ -18,12 +18,12 @@ auth = None
 
 auth_type = getenv('AUTH_TYPE')
 
-""" if auth_type == 'auth':
+if auth_type == 'auth':
     auth = Auth()
 elif auth_type == 'basic_auth':
     auth = BasicAuth()
 elif auth_type== "session_db_auth":
-    auth = SessionDBAuth() """
+    auth = SessionDBAuth()
 
 @app.errorhandler(404)
 def not_found(error) -> str:
@@ -64,6 +64,7 @@ def before_request_func() -> None:
                           '/api/v1/forbidden/']
 
         if not auth.require_auth(request.path, excluded_paths):
+            print("Uwiwiwi")
             return
         if not auth.authorization_header(request):
             print("")
