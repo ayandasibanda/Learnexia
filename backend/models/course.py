@@ -3,7 +3,7 @@
 
 from models.base_model import BaseModel, Base
 from sqlalchemy import String, Column, Integer
-
+from sqlalchemy.orm import relationship
 
 class Course(BaseModel, Base):
     """ Attributes and methods for our class
@@ -15,6 +15,7 @@ class Course(BaseModel, Base):
     description = Column(String(128), nullable=False)
     duration = Column(String(60), nullable=False)
     enrolled = Column(Integer, nullable=False, default=0)
+    lesson = relationship('Lesson', backref='course', cascade="all, delete-orphan")
 
     def __init__(self, *args, **kwargs):
         """Instantiates a class object"""
