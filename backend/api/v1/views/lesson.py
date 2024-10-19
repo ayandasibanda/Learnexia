@@ -3,6 +3,7 @@
 """
 
 from api.v1.views import app_views
+from models.course import Course
 from models.lesson import Lesson
 from models import storage
 from flask import jsonify, abort, request
@@ -31,6 +32,23 @@ def view_one_lesson(lesson_id: str = None) -> str:
 
     if lesson:
         return jsonify(lesson.to_dict()), 200
+    
+
+@app_views.route('/course/<course_id>/lessons', methods=['GET'],
+                 strict_slashes=False)
+def get_lessons_for_course(course_id):
+    """
+    Retrieves the list of all lessons objects
+    of a specific Course, or a specific city
+    """
+    list_lessons = []
+    course = storage.get(Course, course_id)
+    if not course:
+        abort(404)
+    for lesson in course.lessons:
+        list_lessons.append(lesson.to_dict())
+
+    return jsonify(list_lessons), 200
 
 
 @app_views.route('/lesson/<lesson_id>', methods=['DELETE'], strict_slashes=False)

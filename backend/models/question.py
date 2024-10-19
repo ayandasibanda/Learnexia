@@ -35,6 +35,7 @@ class Question():
             self.quiz_id = 'uncategorized'
             self.question = ''
             self.options = []
+            self.answer = ""
 
     def __str__(self):
         """String presentation of object"""
