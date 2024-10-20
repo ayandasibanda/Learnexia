@@ -10,12 +10,12 @@ class Lesson(BaseModel, Base):
     """ Attributes and methods for our class
     Attributes:
         name, description, duration, enrolled"""
-    __tablename__ = 'lesson'
+    __tablename__ = 'lessons'
 
     title = Column(String(128), nullable=False)
     description = Column(String(128), nullable=False)
     duration = Column(String(60), nullable=False)
-    course_id = Column(String(60), ForeignKey('course.id'), nullable=False)
+    course_id = Column(String(60), ForeignKey('courses.id'), nullable=False)
     enrolled = Column(Integer, nullable=True, default=0)
     quiz = relationship('Quiz', backref='lesson', cascade="all, delete-orphan")
 

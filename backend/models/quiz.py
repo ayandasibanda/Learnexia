@@ -9,13 +9,12 @@ class Quiz(BaseModel, Base):
     """ Attributes and methods for our class
     Attributes:
         name, description, duration, enrolled"""
-    __tablename__ = 'quiz'
+    __tablename__ = 'quizzes'
 
     title = Column(String(128), nullable=False)
     description = Column(String(128), nullable=False)
     time_limit = Column(String(60), nullable=False)
-    lesson_id = Column(String(60), ForeignKey('lesson.id'), nullable=False)
-    course_id = Column(String(60), ForeignKey('course.id'), nullable=False)
+    lesson_id = Column(String(60), ForeignKey('lessons.id'), nullable=False)
 
     def __init__(self, *args, **kwargs):
         """Instantiates a class object"""

@@ -9,11 +9,11 @@ class Completion(BaseModel, Base):
     """ Attributes and methods for our class
     Attributes:
         name, description, duration, enrolled"""
-    __tablename__ = 'completion'
+    __tablename__ = 'completions'
 
     user_id = Column(String(60), ForeignKey('user.id'), nullable=False)
     course_id = Column(String(60), ForeignKey('course.id'), nullable=False)
-    completion = Column(Float, default=0, nullable=False)
+    completion = Column(Float, default=0.00, nullable=False)
 
     def __init__(self, *args, **kwargs):
         """Instantiates a class object"""

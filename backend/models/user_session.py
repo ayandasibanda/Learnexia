@@ -12,7 +12,7 @@ class UserSession(BaseModel, Base):
     """
     __tablename__ = 'sessions'
 
-    user_id = Column(String(60), ForeignKey('user.id'), nullable=False)
+    user_id = Column(String(60), ForeignKey('users.id'), nullable=False)
 
     def __init__(self, *args: list, **kwargs: dict):
         super().__init__(*args, **kwargs)

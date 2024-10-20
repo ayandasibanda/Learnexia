@@ -3,8 +3,9 @@
 """
 
 from api.v1.views import app_views
+from models.course import Course
 from models.quiz import Quiz
-from models.quiz import Lesson
+from models.lesson import Lesson
 from models import storage
 from flask import jsonify, abort, request
 
@@ -42,7 +43,10 @@ def get_quizzes_for_course(course_id):
     of a specific Quiz, or a specific city
     """
     list_quizzes = []
-    course = storage.get(Quiz, course_id)
+    list_lessons = []
+    course = storage.get(Course, course_id)
+
+    lessons = course.lessons
     if not course:
         abort(404)
     for quiz in course.quizzes:

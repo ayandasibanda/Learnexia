@@ -2,14 +2,16 @@
 """My user class"""
 
 from models.base_model import BaseModel, Base
-from sqlalchemy import Boolean, Integer, String, Column
+from sqlalchemy import String, Column
+from models.user_session import UserSession
+from sqlalchemy.orm import relationship
 
 class User(BaseModel, Base):
     """User Class
     Attributes:
         FirstName, LastName, Email, PhoneNumber, Password, Category"""
     
-    __tablename__ = 'user'
+    __tablename__ = 'users'
 
     firstname = Column(String(128), nullable=False)
     lastname = Column(String(128), nullable=False)
@@ -19,6 +21,10 @@ class User(BaseModel, Base):
     category = Column(String(128), nullable=False)
     address = Column(String(128), nullable=True)
     country = Column(String(128), nullable=True)
+
+    session = relationship('UserSession', backref='user', cascade="all, delete-orphan")
+
+    courses = relationship('Course', secondary='enrollments_table', backref='users', viewonly=False)
 
     def __init__(self, *args, **kwargs):
         """Instantiates a class object"""

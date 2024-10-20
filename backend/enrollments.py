@@ -1,107 +1,79 @@
 #!/usr/bin/env python3
-""" Module of Quiz views
+""" Module of Enrollement views
 """
 
 from api.v1.views import app_views
+from models.course import Course
 from models.quiz import Quiz
-from models.quiz import Lesson
 from models import storage
 from flask import jsonify, abort, request
+from api.v1.logic.enroll import enroll_course
+from models.user import User
 
-@app_views.route('/quizzes', methods=['GET'], strict_slashes=False)
-def get_all_quizzes() -> str:
+@app_views.route('/enroll', methods=['POST'], strict_slashes=False)
+def enroll() -> str:
     """ GET /api/v1/quizzes
     Return:
       - list of all  objects JSON represented
     """
-    all_quizzes = storage.all(Quiz) #this is a dict
-    return jsonify(all_quizzes), 200
+    data = request.get_json()
+    user_id = data.get('user_id')
+    course_id = data.get('course_id')
+    return enroll_course(user_id, course_id)
 
-@app_views.route('/quiz/<quiz_id>', methods=['GET'], strict_slashes=False)
-def view_one_quiz(quiz_id: str = None) -> str:
-    """ GET /api/v1/quiz/:id
-    Path parameter:
-      - Quiz ID
+
+@app_views.route('/enrollments', methods=['GET'], strict_slashes=False)
+def view_all_enrollments() -> str:
+    """ GET /api/v1/users
     Return:
-      - QUiz object JSON represented
+      - list of all User objects JSON represented
+    """
+    courses = storage.all(Course)
+    result = []
+    try:
+        for course in courses.values:
+            course_info = course.to_dict()
+
+            course_users = [user.to_dict() for user in course.users]
+
+            course_info['enrolled_users'] = course_users
+
+            result.append(course_info)
+        return jsonify(result), 200
+    except Exception as e:
+        return jsonify({'error': "str(e)"}), 404
+
+@app_views.route('/enrollements/<course_id>/users', methods=['GET'], strict_slashes=False)
+def view_users_enrolled_in_course(course_id: str = None) -> str:
+    """ GET /api/v1/enrollements/:id
+    Path parameter:
+      - course ID
+    Return:
+      - List of user dicts object JSON represented
       - 404 if the User ID doesn't exist
     """
-    if not quiz_id:
+    if not course_id:
         abort(404)
-    quiz = storage.get(quiz_id)
+    course = storage.get(Course, course_id)
 
-    if quiz:
-        return jsonify(quiz.to_dict()), 200
+    if course:
+        users = [user.to_dict() for user in course.users]
+        return jsonify(users), 200
+    return jsonify({"error": "No such course"}), 404
     
 
-@app_views.route('/course/<course_id>/quizzes', methods=['GET'],
+@app_views.route('/enrollements/<user_id>/courses', methods=['GET'],
                  strict_slashes=False)
-def get_enrolled_users(course_id):
+def get_user_courses(user_id):
     """
     Retrieves the list of all quizzes objects
     of a specific Quiz, or a specific city
     """
-    list_quizzes = []
-    course = storage.get(Quiz, course_id)
-    if not course:
+    if not user_id:
         abort(404)
-    for quiz in course.quizzes:
-        list_quizzes.append(quiz.to_dict())
-
-    return jsonify(list_quizzes), 200
-
-
-@app_views.route('/quiz/<quiz_id>', methods=['DELETE'], strict_slashes=False)
-def delete_quiz(quiz_id: str = None) -> str:
-    """ DELETE /api/v1/quiz/:id
-    URI Parameter:
-      quiz_id - Lesson ID
-    Return:
-      - empty JSON is the Lesson has been correctly deleted
-      - 404 if the Lesson ID doesn't exist
-    """
-    if quiz_id is None:
+    user = storage.get(User, user_id)
+    if not user:
         abort(404)
-    quiz = Lesson.get(quiz_id)
-    if quiz is None:
-        abort(404)
-    storage.delete(quiz)
-    return jsonify({}), 200
+    user_courses = [course.to_dict() for course in user.courses]
 
-@app_views.route('/quizzes', strict_slashes=False, methods=['POST'])
-def create_quiz():
-    """ POST /api/v1/quizzes/
-    JSON body:
-        firstname, lastname, email, phone_number, 
-        password, category, address, country
-    Return:
-      - User object JSON represented
-      - 400 if can't create the new User
-    """
-
-    quiz_data = request.get_json()
-
-    errors = [' title',
-              'description ',
-              'duration',
-              'course_id']
-
-    if not quiz_data:
-        abort(400, 'Missing information')
-    
-    error_msg = None
-
-    for key in errors:
-        if not (quiz_data.get(key)):
-            error_msg = "Missing {}".format(key)
-    
-    if not error_msg:
-        try:
-            new_quiz = Lesson(**quiz_data)
-            storage.new(new_quiz)
-            storage.save()
-            return jsonify(new_quiz.to_dict()), 200
-        except Exception as e:
-            print(e)
-            error_msg = "Can't create Lesson: {}".format(e)
-    return jsonify({'error': error_msg}), 400
+    return jsonify(user_courses), 200
