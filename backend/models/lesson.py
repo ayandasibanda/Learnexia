@@ -16,8 +16,10 @@ class Lesson(BaseModel, Base):
     description = Column(String(128), nullable=False)
     duration = Column(String(60), nullable=False)
     course_id = Column(String(60), ForeignKey('courses.id'), nullable=False)
-    enrolled = Column(Integer, nullable=True, default=0)
-    quiz = relationship('Quiz', backref='lesson', cascade="all, delete-orphan")
+    youtube_link = Column(String(255), nullable=True)
+    resource_link_one = Column(String(255), nullable=True)
+    resource_link_two = Column(String(255), nullable=True)
+    quizzes = relationship('Quiz', backref='lesson', cascade="all, delete-orphan")
 
     def __init__(self, *args, **kwargs):
         """Instantiates a class object"""

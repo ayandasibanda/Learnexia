@@ -28,7 +28,7 @@ def view_one_lesson(lesson_id: str = None) -> str:
     """
     if not lesson_id:
         abort(404)
-    lesson = storage.get(lesson_id)
+    lesson = storage.get(Lesson, lesson_id)
 
     if lesson:
         return jsonify(lesson.to_dict()), 200
@@ -62,7 +62,7 @@ def delete_lesson(lesson_id: str = None) -> str:
     """
     if lesson_id is None:
         abort(404)
-    lesson = Lesson.get(lesson_id)
+    lesson = storage.get(Lesson, lesson_id)
     if lesson is None:
         abort(404)
     storage.delete(lesson)
@@ -82,7 +82,7 @@ def create_lesson():
     lesson_data = request.get_json()
 
     errors = [' title',
-              'description ',
+              'description',
               'duration',
               'course_id']
 
@@ -105,3 +105,28 @@ def create_lesson():
             print(e)
             error_msg = "Can't create Lesson: {}".format(e)
     return jsonify({'error': error_msg}), 400
+
+
+@app_views.route('/lessons/<lesson_id>', methods=['PUT'], strict_slashes=False)
+def update_lesson(lesson_id):
+    """Updates a lesson data"""
+    checks = [' title',
+              'description',
+              'duration']
+
+    lesson= storage.get(Lesson, lesson_id)
+
+    if not lesson:
+        abort(404)
+
+    if not request.get_json():
+        abort(400, description="Not a JSON")
+
+    ignore = ['id', 'email', 'created_at', 'updated_at']
+
+    data = request.get_json()
+    for key, value in data.items():
+        if key not in ignore and key in checks:
+            setattr(lesson, key, value)
+    storage.save()
+    return jsonify(lesson.to_dict()), 200

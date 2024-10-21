@@ -29,7 +29,7 @@ def view_one_quiz(quiz_id: str = None) -> str:
     """
     if not quiz_id:
         abort(404)
-    quiz = storage.get(quiz_id)
+    quiz = storage.get(Quiz, quiz_id)
 
     if quiz:
         return jsonify(quiz.to_dict()), 200
@@ -43,34 +43,18 @@ def get_quizzes_for_course(course_id):
     of a specific Quiz, or a specific city
     """
     list_quizzes = []
-    list_lessons = []
     course = storage.get(Course, course_id)
 
     lessons = course.lessons
-    if not course:
+    if not lessons:
         abort(404)
-    for quiz in course.quizzes:
-        list_quizzes.append(quiz.to_dict())
-
+    for lesson in course.lessons:
+        for quiz in lesson.quizzes:
+            list_quizzes.append(quiz)
+    
     return jsonify(list_quizzes), 200
 
 
-@app_views.route('/quiz/<quiz_id>', methods=['DELETE'], strict_slashes=False)
-def delete_quiz(quiz_id: str = None) -> str:
-    """ DELETE /api/v1/quiz/:id
-    URI Parameter:
-      quiz_id - Lesson ID
-    Return:
-      - empty JSON is the Lesson has been correctly deleted
-      - 404 if the Lesson ID doesn't exist
-    """
-    if quiz_id is None:
-        abort(404)
-    quiz = Lesson.get(quiz_id)
-    if quiz is None:
-        abort(404)
-    storage.delete(quiz)
-    return jsonify({}), 200
 
 @app_views.route('/quizzes', strict_slashes=False, methods=['POST'])
 def create_quiz():
@@ -88,7 +72,7 @@ def create_quiz():
     errors = [' title',
               'description ',
               'duration',
-              'course_id']
+              'lesson_id']
 
     if not quiz_data:
         abort(400, 'Missing information')
@@ -109,3 +93,47 @@ def create_quiz():
             print(e)
             error_msg = "Can't create Lesson: {}".format(e)
     return jsonify({'error': error_msg}), 400
+
+
+@app_views.route('/quiz/<quiz_id>', methods=['DELETE'], strict_slashes=False)
+def delete_quiz(quiz_id: str = None) -> str:
+    """ DELETE /api/v1/quiz/:id
+    URI Parameter:
+      quiz_id - Lesson ID
+    Return:
+      - empty JSON is the Lesson has been correctly deleted
+      - 404 if the Lesson ID doesn't exist
+    """
+    if quiz_id is None:
+        abort(404)
+    quiz = storage.get(Quiz, quiz_id)
+    if quiz is None:
+        abort(404)
+    storage.delete(quiz)
+    return jsonify({}), 200
+
+
+@app_views.route('/quiz/<quiz_id>', methods=['PUT'], strict_slashes=False)
+def update_quiz(quiz_id):
+    """Updates a quiz data"""
+    checks = [' title',
+              'description ',
+              'duration',
+              'lesson_id']
+
+    quiz= storage.get(Quiz, quiz_id)
+
+    if not quiz:
+        abort(404)
+
+    if not request.get_json():
+        abort(400, description="Not a JSON")
+
+    ignore = ['id', 'email', 'created_at', 'updated_at']
+
+    data = request.get_json()
+    for key, value in data.items():
+        if key not in ignore and key in checks:
+            setattr(quiz, key, value)
+    storage.save()
+    return jsonify(quiz.to_dict()), 200

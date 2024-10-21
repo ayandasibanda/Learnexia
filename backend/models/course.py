@@ -27,7 +27,6 @@ class Course(BaseModel, Base):
     title = Column(String(128), nullable=False)
     description = Column(String(128), nullable=False)
     duration = Column(String(60), nullable=False)
-    enrolled = Column(Integer, nullable=False, default=0)
     lessons = relationship('Lesson', backref='course', 
                           cascade="all, delete-orphan")
 
