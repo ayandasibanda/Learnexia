@@ -19,7 +19,7 @@ class Lesson(BaseModel, Base):
     youtube_link = Column(String(255), nullable=True)
     resource_link_one = Column(String(255), nullable=True)
     resource_link_two = Column(String(255), nullable=True)
-    quizzes = relationship('Quiz', backref='lesson', cascade="all, delete-orphan")
+    quizzes = relationship('Quiz', backref='lessons', cascade="all, delete-orphan")
 
     def __init__(self, *args, **kwargs):
         """Instantiates a class object"""

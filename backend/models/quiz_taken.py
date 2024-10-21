@@ -3,6 +3,7 @@
 
 from models.base_model import BaseModel, Base
 from sqlalchemy import ForeignKey, String, Column, Integer
+from sqlalchemy.orm import relationship
 
 
 class QuizAttempt(BaseModel, Base):

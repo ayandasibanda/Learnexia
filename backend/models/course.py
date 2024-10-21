@@ -8,7 +8,7 @@ from models.quiz import Quiz
 from models.user import User
 from models import storage
 
-enrollments_table = Table('enrollments', Base.metadata,
+enrollments = Table('enrollments', Base.metadata,
                           Column('user_id', String(60),
                                  ForeignKey('users.id', onupdate='CASCADE',
                                             ondelete='CASCADE'),
@@ -27,29 +27,27 @@ class Course(BaseModel, Base):
     title = Column(String(128), nullable=False)
     description = Column(String(128), nullable=False)
     duration = Column(String(60), nullable=False)
-    lessons = relationship('Lesson', backref='course', 
+    lessons = relationship('Lesson', backref='courses', 
                           cascade="all, delete-orphan")
 
-    users = relationship('User', secondary='enrollments_table', 
+    users = relationship('User', secondary='enrollments', 
                          backref='courses', viewonly=False)
 
     def __init__(self, *args, **kwargs):
         """Instantiates a class object"""
         super().__init__(*args, **kwargs)
 
-    def get_quiz_count(self):
+    def get_quizzes(self):
         """Gets the quizzes linked to courses"""
-        number_quizzes = 0
+        course_quizzes = []
 
         quizzes = storage.all(Quiz)
         if quizzes:
-            course_quizzes = []
             for quiz in quizzes:
                 if quiz.course_id == self.id:
                     course_quizzes.append(quiz)
             
-            number_quizzes = len(course_quizzes)
-        return number_quizzes
+        return course_quizzes
 
 
 
