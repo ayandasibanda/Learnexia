@@ -6,16 +6,6 @@ from sqlalchemy import ForeignKey, String, Column, Table
 from models.user_session import UserSession
 from sqlalchemy.orm import relationship
 
-completions = Table('completions', Base.metadata,
-                          Column('user_id', String(60),
-                                 ForeignKey('users.id', onupdate='CASCADE',
-                                            ondelete='CASCADE'),
-                                 primary_key=True),
-                          Column('course_id', String(60),
-                                 ForeignKey('courses.id', onupdate='CASCADE',
-                                            ondelete='CASCADE'),
-                                 primary_key=True))
-
 class User(BaseModel, Base):
     """User Class
     Attributes:
