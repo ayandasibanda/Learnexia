@@ -41,14 +41,9 @@ class Course(BaseModel, Base):
         """Gets the quizzes linked to courses"""
         course_quizzes = []
 
-        quizzes = storage.all(Quiz)
-        if quizzes:
-            for quiz in quizzes:
-                if quiz.course_id == self.id:
-                    course_quizzes.append(quiz)
-            
+        lessons = self.lessons
+
+        for lesson in lessons:
+            course_quizzes.append(lesson.quizzes)
+
         return course_quizzes
-
-
-
-            

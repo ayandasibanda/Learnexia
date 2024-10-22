@@ -3,13 +3,13 @@
 """
 
 from api.v1.views import app_views
+from models.completion import Completion
 from models.course import Course
 from models.quiz import Quiz
 from models.quiz_taken import QuizAttempt
 from models.lesson import Lesson
 from models import storage
 from flask import jsonify, abort, request
-
 from models.user import User
 
 app_views('/submit_quiz', methods=['POST'], strict_slahes=False)
@@ -33,24 +33,48 @@ def submit_quiz():
     quiz_attempt = QuizAttempt(**{'user_id': user_id,
                            'quiz_id': quiz_id,
                            'score': score})
-    quiz = storage.get(Course, quiz_id)
+    storage.new(quiz_attempt)
+    storage.save()
 
-    lesson = storage.get(Lesson, quiz.lesson_id)
+    try:
+        quiz = storage.get(Quiz, quiz_id)
+        if not quiz:
+            return jsonify({"error": "Quiz not found"}), 404
 
-    course = storage.get(Course, lesson.course_id)
+        lesson = storage.get(Lesson, quiz.lesson_id)
+        if not lesson:
+            return jsonify({"error": "Lesson not found"}), 404
 
-    course_quizzes = course.get_quizzes()
+        course = storage.get(Course, lesson.course_id)
+        if not course:
+            return jsonify({"error": "Course not found"}), 404
 
-    user = storage.get(User, user_id)
+        course_quizzes = course.get_quizzes()
 
-    completed_quiz_no = 0
+        course_quizzes_lst = [quiz.id for quiz in course_quizzes]
 
-    for completed_quiz in user.quizzes_taken:
-        for quiz in course_quizzes:
-            if quiz.id == completed_quiz.quiz_id:
-                completed_quiz_no += 1
-    
-    completion_rate = (completed_quiz_no / len(course_quizzes)) * 100
+        user = storage.get(User, user_id)
+        if not user:
+            return jsonify({"error": "User not found"}), 404
 
-    
+        competed_quizzes_lst = [completed_quiz.id for completed_quiz in user.quizzes_taken]
+
+        completed_quiz_set = set(course_quizzes_lst) & set(competed_quizzes_lst)
+        
+        completion_rate = round((len(completed_quiz_set) / len(course_quizzes)) * 100)
+
+        completion = storage.get_user_courses_completion_rate(user_id, course.id)
+        current_completion_data = {'user_id': user_id, 'course_id': course.id, 'completion': completion_rate}
+
+        if completion:
+            setattr(completion, 'completion', completion_rate)
+            storage.save()
+            return jsonify(completion.to_dict()), 200
+        else:
+            new_completion = Completion(**{current_completion_data})
+            storage.new(new_completion)
+            storage.save()
+            return jsonify(new_completion.to_dict()), 200
+    except Exception as e:
+        return jsonify({'error': 'Error: {}'.format(e)}), 404
     

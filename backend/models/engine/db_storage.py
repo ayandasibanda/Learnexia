@@ -127,6 +127,12 @@ class DBStorage():
                 return obj
         return None
     
+    def get_user_courses_completion_rate(self, user_id, course_id):
+        """ Gets the user's completion rate """
+        courses_completion_rate = self.__session.query(Completion).filter_by(user_id=user_id, course_id=course_id).all()
+
+        return courses_completion_rate
+    
     def delete(self, obj=None):
         """Deletes an object from the database"""
         if obj:
