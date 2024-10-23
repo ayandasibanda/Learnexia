@@ -11,8 +11,8 @@ class Completion(BaseModel, Base):
         name, description, duration, enrolled"""
     __tablename__ = 'completions'
 
-    user_id = Column(String(60), ForeignKey('user.id'), nullable=False)
-    course_id = Column(String(60), ForeignKey('course.id'), nullable=False)
+    user_id = Column(String(60), ForeignKey('users.id'), nullable=False)
+    course_id = Column(String(60), ForeignKey('courses.id'), nullable=False)
     completion = Column(Float, default=0.00, nullable=False)
 
     def __init__(self, *args, **kwargs):

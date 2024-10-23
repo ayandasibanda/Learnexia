@@ -18,7 +18,7 @@ def get_all_quizzes() -> str:
     all_quizzes = storage.all(Quiz) #this is a dict
     return jsonify(all_quizzes), 200
 
-@app_views.route('/quiz/<quiz_id>', methods=['GET'], strict_slashes=False)
+@app_views.route('/quizzes/<quiz_id>', methods=['GET'], strict_slashes=False)
 def view_one_quiz(quiz_id: str = None) -> str:
     """ GET /api/v1/quiz/:id
     Path parameter:
@@ -34,7 +34,7 @@ def view_one_quiz(quiz_id: str = None) -> str:
     if quiz:
         return jsonify(quiz.to_dict()), 200
     
-@app_views.route('/quiz/<quiz_id>/questions', methods=['GET'],
+@app_views.route('/quizzes/<quiz_id>/questions', methods=['GET'],
                  strict_slashes=False)
 def get_quiz_questions(quiz_id):
     """Get questions related to quiz
@@ -46,7 +46,7 @@ def get_quiz_questions(quiz_id):
     """
     return fetch_quiz_questions(quiz_id)
 
-@app_views.route('/course/<course_id>/quizzes', methods=['GET'],
+@app_views.route('/courses/<course_id>/quizzes', methods=['GET'],
                  strict_slashes=False)
 def get_quizzes_for_course(course_id):
     """
@@ -64,7 +64,6 @@ def get_quizzes_for_course(course_id):
             list_quizzes.append(quiz)
     
     return jsonify(list_quizzes), 200
-
 
 
 @app_views.route('/quizzes', strict_slashes=False, methods=['POST'])

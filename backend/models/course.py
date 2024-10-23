@@ -6,7 +6,6 @@ from sqlalchemy import ForeignKey, String, Column, Integer, Table
 from sqlalchemy.orm import relationship
 from models.quiz import Quiz
 from models.user import User
-from models import storage
 
 enrollments = Table('enrollments', Base.metadata,
                           Column('user_id', String(60),
@@ -31,7 +30,7 @@ class Course(BaseModel, Base):
                           cascade="all, delete-orphan")
 
     users = relationship('User', secondary='enrollments', 
-                         backref='courses', viewonly=False)
+                         backref='enrolled_courses', viewonly=False)
 
     def __init__(self, *args, **kwargs):
         """Instantiates a class object"""

@@ -17,14 +17,14 @@ def view_all_lessons() -> str:
     all_lessons = storage.all(Lesson) #this is a dict
     return jsonify(all_lessons), 200
 
-@app_views.route('/lesson/<lesson_id>', methods=['GET'], strict_slashes=False)
+@app_views.route('/lessons/<lesson_id>', methods=['GET'], strict_slashes=False)
 def view_one_lesson(lesson_id: str = None) -> str:
     """ GET /api/v1/lesson/:id
     Path parameter:
       - Lesson ID
     Return:
       - Lesson object JSON represented
-      - 404 if the User ID doesn't exist
+      - 404 if the Lesson ID doesn't exist
     """
     if not lesson_id:
         abort(404)
@@ -34,7 +34,7 @@ def view_one_lesson(lesson_id: str = None) -> str:
         return jsonify(lesson.to_dict()), 200
     
 
-@app_views.route('/course/<course_id>/lessons', methods=['GET'],
+@app_views.route('/courses/<course_id>/lessons', methods=['GET'],
                  strict_slashes=False)
 def get_lessons_for_course(course_id):
     """
@@ -51,7 +51,7 @@ def get_lessons_for_course(course_id):
     return jsonify(list_lessons), 200
 
 
-@app_views.route('/lesson/<lesson_id>', methods=['DELETE'], strict_slashes=False)
+@app_views.route('/lessons/<lesson_id>', methods=['DELETE'], strict_slashes=False)
 def delete_lesson(lesson_id: str = None) -> str:
     """ DELETE /api/v1/lesson/:id
     URI Parameter:
@@ -114,7 +114,7 @@ def update_lesson(lesson_id):
               'description',
               'duration']
 
-    lesson= storage.get(Lesson, lesson_id)
+    lesson = storage.get(Lesson, lesson_id)
 
     if not lesson:
         abort(404)

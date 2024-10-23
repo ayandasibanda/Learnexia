@@ -13,7 +13,7 @@ class QuizAttempt(BaseModel, Base):
     __tablename__ = 'quiz_attempts'
 
     user_id = Column(String(60), ForeignKey('users.id'))
-    quiz_id = Column(String(60), ForeignKey('quiz.id'))
+    quiz_id = Column(String(60), ForeignKey('quizzes.id'))
     score = Column(Integer, default=0, nullable=True)
 
     def __init__(self, *args, **kwargs):

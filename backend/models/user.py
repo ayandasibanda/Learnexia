@@ -5,6 +5,7 @@ from models.base_model import BaseModel, Base
 from sqlalchemy import ForeignKey, String, Column, Table
 from models.user_session import UserSession
 from sqlalchemy.orm import relationship
+from models.quiz_taken import QuizAttempt
 
 class User(BaseModel, Base):
     """User Class
@@ -22,11 +23,11 @@ class User(BaseModel, Base):
     address = Column(String(128), nullable=True)
     country = Column(String(128), nullable=True)
 
-    session = relationship('UserSession', backref='users', cascade="all, delete-orphan")
+    session = relationship('UserSession', backref='user_session', cascade="all, delete-orphan")
 
-    courses = relationship('Course', secondary='enrollments', backref='users', viewonly=False)
+    courses = relationship('Course', secondary='enrollments', backref='user_courses', viewonly=False)
 
-    quizzes_taken = relationship('QuizAttempt', backref='users', cascade="all, delete-orphan")
+    quizzes_taken = relationship('QuizAttempt', backref='quiz_users', cascade="all, delete-orphan")
 
     def __init__(self, *args, **kwargs):
         """Instantiates a class object"""

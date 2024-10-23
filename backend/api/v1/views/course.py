@@ -18,7 +18,7 @@ def view_all_coursess() -> str:
     return jsonify(all_courses), 200
 
 @app_views.route('/courses/<course_id>', methods=['GET'], strict_slashes=False)
-def view_one_lesson(course_id: str = None) -> str:
+def view_one_course(course_id: str = None) -> str:
     """ GET /api/v1/course/:id
     Path parameter:
       - Course ID
@@ -86,3 +86,27 @@ def create_course():
             print(e)
             error_msg = "Can't create Course: {}".format(e)
     return jsonify({'error': error_msg}), 400
+
+@app_views.route('/course/<course_id>', methods=['PUT'], strict_slashes=False)
+def update_course(course_id):
+    """Updates a course data"""
+    checks = [' title',
+              'description',
+              'duration']
+
+    course = storage.get(Lesson, course_id)
+
+    if not course:
+        abort(404)
+
+    if not request.get_json():
+        abort(400, description="Not a JSON")
+
+    ignore = ['id', 'email', 'created_at', 'updated_at']
+
+    data = request.get_json()
+    for key, value in data.items():
+        if key not in ignore and key in checks:
+            setattr(course, key, value)
+    storage.save()
+    return jsonify(course.to_dict()), 200

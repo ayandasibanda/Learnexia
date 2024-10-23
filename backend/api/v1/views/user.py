@@ -111,10 +111,6 @@ def create_user():
             error_msg = "Can't create User: {}".format(e)
     return jsonify({'error': error_msg}), 400
 
-@app_views.route('/users/<user_id>', methods=['PUT'], strict_slashes=False)
-def update_user(user_id: str = None) -> str:
-    pass
-
 @app_views.route('/users/me', methods=['GET'], strict_slashes=False)
 def get_authenticated_user():
     """ Retrieves an authenticated user """

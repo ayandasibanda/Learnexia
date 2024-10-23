@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """ Fetch questions """
 
-from models.engine.file_storage import FileStorage as f_storage
-
 def fetch_quiz_questions(quiz_id):
     """Gets the questions from the file
     Params:
@@ -10,4 +8,6 @@ def fetch_quiz_questions(quiz_id):
     Returns:
         an array of dicts
     """
+    from models.engine.file_storage import FileStorage as f_storage
+
     return f_storage.get_questions(quiz_id)

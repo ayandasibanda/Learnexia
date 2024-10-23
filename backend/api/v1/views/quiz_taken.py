@@ -12,7 +12,7 @@ from models import storage
 from flask import jsonify, abort, request
 from models.user import User
 
-app_views('/submit_quiz', methods=['POST'], strict_slahes=False)
+@app_views.route('/submit_quiz', methods=['POST'], strict_slashes=False)
 def submit_quiz():
     """Once a user submits a quiz"""
     quiz_data = request.get_json()

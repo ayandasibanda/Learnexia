@@ -64,7 +64,6 @@ def before_request_func() -> None:
                           '/api/v1/forbidden/']
 
         if not auth.require_auth(request.path, excluded_paths):
-            print("Uwiwiwi")
             return
         if not auth.authorization_header(request):
             print("")
