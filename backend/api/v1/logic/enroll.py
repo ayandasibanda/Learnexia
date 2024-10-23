@@ -31,9 +31,9 @@ def enroll_course(user_id, course_id):
     # Check if the user is already enrolled in the course
     for registered_user in course.users:
         if user.id == registered_user.id:
-            completions = storage.all(Completion)
+            completions = storage.all(Completion).values()
             for completion in completions:
-                if completion.user_id == user.id:
+                if completion.get('user_id') == user.id:
                     if completion >= 100:
                         return jsonify({'message': 'User already enrolled in this course'}), 400
                     break

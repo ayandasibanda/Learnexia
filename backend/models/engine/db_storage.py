@@ -7,14 +7,13 @@ from dotenv import load_dotenv
 from models.base_model import Base
 from models.completion import Completion
 from models.course import Course
-from models.enrollments import Enrollment
 from models.lesson import Lesson
 from models.quiz import Quiz
 from models.user import User
 
 load_dotenv()
 
-cls_lst = [User, Course, Lesson, Quiz, Completion, Enrollment]
+cls_lst = [User, Course, Lesson, Quiz, Completion]
 
 class DBStorage():
     """MySql database connection class"""

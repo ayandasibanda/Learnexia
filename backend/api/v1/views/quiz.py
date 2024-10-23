@@ -5,9 +5,9 @@
 from api.v1.views import app_views
 from models.course import Course
 from models.quiz import Quiz
-from models.lesson import Lesson
 from models import storage
 from flask import jsonify, abort, request
+from api.v1.logic.questions import fetch_quiz_questions
 
 @app_views.route('/quizzes', methods=['GET'], strict_slashes=False)
 def get_all_quizzes() -> str:
@@ -34,6 +34,17 @@ def view_one_quiz(quiz_id: str = None) -> str:
     if quiz:
         return jsonify(quiz.to_dict()), 200
     
+@app_views.route('/quiz/<quiz_id>/questions', methods=['GET'],
+                 strict_slashes=False)
+def get_quiz_questions(quiz_id):
+    """Get questions related to quiz
+    Params:
+        quiz_id: the QUIZ ID
+    Returns:
+        An array of dicts
+        otherwise empty array
+    """
+    return fetch_quiz_questions(quiz_id)
 
 @app_views.route('/course/<course_id>/quizzes', methods=['GET'],
                  strict_slashes=False)
@@ -85,7 +96,7 @@ def create_quiz():
     
     if not error_msg:
         try:
-            new_quiz = Lesson(**quiz_data)
+            new_quiz = Quiz(**quiz_data)
             storage.new(new_quiz)
             storage.save()
             return jsonify(new_quiz.to_dict()), 200
