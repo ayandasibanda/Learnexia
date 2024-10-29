@@ -1,142 +1,85 @@
 import React from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Lesson1 from "./lessons/lesson1";
+import Lesson2 from "./lessons/lesson2";
+import Lesson3 from "./lessons/lesson3";
+
+import Lesson4 from "./lessons/lesson4";
+import Lesson5 from "./lessons/lesson5";
+import Lesson6 from "./lessons/lesson6";
 
 const LessonPage = () => {
-  const { lessonId, courseId} = useParams();
+  const { lessonId, courseId } = useParams();
   const navigate = useNavigate();
-
-
-  const lessons = [
-    {
-      id: 1,
-      title: "Lesson 1: Introduction to Variables",
-      content: `
-        In JavaScript, variables are containers for storing data values.
-        There are three types of variable declarations: var, let, and const.
-        Each of these has its own characteristics, and choosing the right one depends on the use case.
-      `,
-      resources: [
-        {
-          title: "MDN Web Docs - Variables Guide",
-          link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Variables",
-        },
-        {
-          title: "JavaScript.info - Variables",
-          link: "https://www.javascript.info/variables",
-        },
-      ],
+  
+  const courses = {
+    1: {
+      lessons: {
+        1: <Lesson1 />, 
+        2: <Lesson2 />,
+        3: <Lesson3 />,
+        4: <Lesson4 />,
+      }
     },
-    {
-      id: 2,
-      title: "Lesson 2: Functions and Scope",
-      content: `
-        JavaScript functions are blocks of code designed to perform a task.
-        You define a function once and can execute it any number of times.
-        JavaScript functions have access to the global scope.
-      `,
-      resources: [
-        {
-          title: "MDN Web Docs - Functions",
-          link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions",
-        },
-        {
-          title: "JavaScript.info - Functions",
-          link: "https://www.javascript.info/function-basics",
-        },
-      ],
-    },
-    {
-      id: 3,
-      title: "Lesson 3: Objects and Arrays",
-      content: `
-        JavaScript objects are used to store keyed collections of various data and more complex entities.
-        An array is a special type of object that allows you to store ordered collections of data.
-      `,
-      resources: [
-        {
-          title: "MDN Web Docs - Working with Objects",
-          link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects",
-        },
-        {
-          title: "JavaScript.info - Objects",
-          link: "https://www.javascript.info/object",
-        },
-      ],
-    },
-  ];
+    2: {
+      lessons: {
+        1: <Lesson5 />,
+        2: <Lesson6 />,
+      }
+    }
+  };
+  
+  const lessonsForCourse = courses[courseId]?.lessons;
+  const lesson = lessonsForCourse ? lessonsForCourse[lessonId] : null;
+  if (!lesson) return <div>Lesson not found!</div>;
 
-  const lesson = lessons.find((lesson) => lesson.id === parseInt(lessonId));
+  const totalLessons = lessonsForCourse ? Object.keys(lessonsForCourse).length : 0;
 
-  if (!lesson) {
-    return <div className="text-center text-gray-500 mt-10">Lesson not found!</div>;
-  }
-
-  const currentLessonIndex = lessons.findIndex((l) => l.id === lesson.id);
-  const previousLessonId = currentLessonIndex > 0 ? lessons[currentLessonIndex - 1].id : null;
-  const nextLessonId = currentLessonIndex < lessons.length - 1 ? lessons[currentLessonIndex + 1].id : null;
-
-  const isLastLesson = currentLessonIndex === lessons.length - 1;
+  const nextLessonId = parseInt(lessonId) + 1;
+  const previousLessonId = parseInt(lessonId) - 1;
+  const isLastLesson = parseInt(lessonId) === totalLessons;
 
   return (
-    <div>
+    <div className="bg-gray-100">
       <Navbar />
 
       <div className="lesson-header bg-indigo-600 text-white p-4">
         <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-3xl font-bold">{lesson.title}</h1>
-          <Link
-            to={`/Course/${courseId}`}
-            className="bg-indigo-500 px-4 py-2 rounded text-white"
-          >
+          <Link to={`/Course/${courseId}`} className="bg-indigo-500 px-4 py-2 rounded text-white">
             Course Overview
           </Link>
         </div>
       </div>
 
-      <div className="lesson-content p-8 bg-white shadow-md max-w-3xl mx-auto mt-8 rounded-lg">
-        <h2 className="text-2xl font-semibold mb-4">{lesson.title}</h2>
-        <p className="text-gray-700 text-lg leading-relaxed mb-6">{lesson.content}</p>
-      </div>
-
-      <div className="external-resources bg-indigo-50 p-6 rounded-lg mt-8 max-w-3xl mx-auto">
-        <h2 className="text-2xl font-semibold text-indigo-700 mb-4">Additional Resources</h2>
-        <ul className="list-disc list-inside text-gray-700">
-          {lesson.resources.map((resource, index) => (
-            <li key={index}>
-              <a
-                href={resource.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-indigo-600 hover:underline"
-              >
-                {resource.title}
-              </a>
-            </li>
-          ))}
-        </ul>
+      <div className="max-w-6xl mx-auto mt-8">
+        {lesson}
       </div>
 
       <div className="lesson-navigation flex justify-between p-4 bg-gray-100 mt-8 shadow-inner max-w-3xl mx-auto mb-2 rounded-lg">
-        {previousLessonId && (
+        {previousLessonId > 0 && (
           <Link
-          to={`/courses/${courseId}/lessons/${previousLessonId}`}
-            className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500"
+            to={`/courses/${courseId}/lessons/${previousLessonId}`}
+            className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500 flex items-center"
           >
+            <FaArrowLeft className="mr-2" />
             Previous Lesson
           </Link>
         )}
-        {nextLessonId && (
+        {!isLastLesson && (
           <Link
-          to={`/courses/${courseId}/lessons/${nextLessonId}`}
-            className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500"
+            to={`/courses/${courseId}/lessons/${nextLessonId}`}
+            className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500 flex items-center"
           >
             Next Lesson
+            <FaArrowRight className="ml-2" />
           </Link>
         )}
       </div>
-       {isLastLesson && (
+
+      {isLastLesson && (
         <div className="flex justify-center">
           <button
             onClick={() => navigate(`/courses/${courseId}/quiz`)}
@@ -146,6 +89,7 @@ const LessonPage = () => {
           </button>
         </div>
       )}
+
       <Footer />
     </div>
   );

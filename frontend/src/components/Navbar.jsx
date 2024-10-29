@@ -6,9 +6,11 @@ const Navbar = () => {
     <header className="bg-white shadow-lg">
       <div className="mx-auto flex justify-between items-center px-6">
 
+        <Link to="/">
         <h1 className="text-3xl font-bold text-indigo-600">
           Learnexia
         </h1>
+        </Link>
 
         <nav className="flex space-x-8 font-bold">
           <Link to="/" className="text-gray-700 hover:text-indigo-600 transition duration-300">

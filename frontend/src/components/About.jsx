@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 
+
 const AboutUs = () => {
     return (
         <div>
@@ -54,35 +55,6 @@ const AboutUs = () => {
                             <p className="text-gray-600">
                                 Building a community of learners from all walks of life, embracing diversity and inclusion.
                             </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className="py-16 bg-white">
-                <div className="container mx-auto px-6 text-center">
-                    <h2 className="text-3xl font-bold text-indigo-600">Meet Our Team</h2>
-                    <p className="text-gray-600 mt-4 max-w-3xl mx-auto">
-                        Behind every great learning experience is a team of passionate educators, developers, and visionaries.
-                    </p>
-
-                    <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-10">
-                        <div className="bg-gray-100 p-8 rounded-lg shadow-lg">
-                            <img src="images/image6.jpg" alt="Team Member" className="rounded-full w-32 h-32 mx-auto mb-4" />
-                            <h3 className="text-xl font-bold text-indigo-600">Alice Johnson</h3>
-                            <p className="text-gray-600">CEO & Founder</p>
-                        </div>
-
-                        <div className="bg-gray-100 p-8 rounded-lg shadow-lg">
-                            <img src="images/team2.jpg" alt="Team Member" className="rounded-full w-32 h-32 mx-auto mb-4" />
-                            <h3 className="text-xl font-bold text-indigo-600">Bob Smith</h3>
-                            <p className="text-gray-600">CTO</p>
-                        </div>
-
-                        <div className="bg-gray-100 p-8 rounded-lg shadow-lg">
-                            <img src="images/team3.jpg" alt="Team Member" className="rounded-full w-32 h-32 mx-auto mb-4" />
-                            <h3 className="text-xl font-bold text-indigo-600">Charlie Davis</h3>
-                            <p className="text-gray-600">Head of Education</p>
                         </div>
                     </div>
                 </div>
