@@ -9,10 +9,13 @@ const CourseDetail = () => {
   const [course, setCourse] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  const url = 'http://localhost:5000/api/v1';
+
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        const response = await axios.get(`/api/v1/courses/${id}`);
+        const response = await axios.get(`${url}/courses/${id}`);
+        console.log(response.data);
         setCourse(response.data);
       } catch (error) {
         console.error("Error fetching course data:", error);
@@ -55,7 +58,7 @@ const CourseDetail = () => {
                 <strong>Level:</strong> {course.level}
               </p>
               <p className="text-xl font-medium text-gray-900">
-                <strong>Estimated Time:</strong> {course.estimatedTime}
+                <strong>Estimated Time:</strong> {course.duration}
               </p>
             </div>
 

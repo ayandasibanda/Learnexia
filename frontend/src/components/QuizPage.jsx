@@ -13,11 +13,31 @@ const QuizPage = () => {
   const [score, setScore] = useState(0);
   const TimerId = useRef(null);
 
+  const url = 'http://localhost:5000/api/v1';
+
   useEffect(() => {
-    axios.get(`/api/courses/${courseId}/quiz`)
-      .then(response => setQuestions(response.data.questions))
-      .catch(error => console.error("Error fetching questions:", error));
+    async function fetchQuizQuestions() {
+      try {
+        const quizResponse = await axios.get(`${url}/courses/${courseId}/quizzes`);
+
+        const quiz = quizResponse.data[0];
+        const quizId = quiz.id;
+
+        console.log(quizId);
+
+        const questionsResponse = await axios.get(`${url}/quizzes/${quizId}/questions`);
+
+        console.log(questionsResponse.data);
+        setQuestions(questionsResponse.data);
+        
+      } catch (error) {
+        console.error("Error fetching quiz questions:", error);
+      }
+    }
+  
+    fetchQuizQuestions();
   }, [courseId]);
+  
 
   useEffect(() => {
     if (!submitted && questions.length > 0) {

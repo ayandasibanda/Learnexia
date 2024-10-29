@@ -8,11 +8,18 @@ const Courses = () => {
     const [courses, setCourses] = useState([]);
     const [searchCourse, setSearchCourse] = useState("");
 
+    const url = 'http://localhost:5000/api/v1';
     useEffect(() => {
         const fetchCourses = async () => {
             try {
-                const response = await axios.get("/api/courses");
-                setCourses(response.data);
+                const response = await axios.get(`${url}/courses`);
+                if (response.data) {
+                    const arr = [];
+                    for (const [key, value] of Object.entries(response.data)) {
+                        arr.push(value);
+                    }
+                    setCourses(arr);
+                }
             } catch (error) {
                 console.error("Error fetching courses:", error);
             }
@@ -75,7 +82,7 @@ const Courses = () => {
                                             }`}>
                                             {course.level}
                                         </span>
-                                        <span className="text-gray-700 text-sm rounded-full bg-gray-200 px-2">{course.estimatedTime}</span>
+                                        <span className="text-gray-700 text-sm rounded-full bg-gray-200 px-2">{course.duration}</span>
                                     </div>
                                 </div>
 
