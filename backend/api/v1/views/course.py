@@ -28,7 +28,15 @@ def view_one_course(course_id: str = None) -> str:
     """
     if not course_id:
         abort(404)
-    course = storage.get(course_id)
+    course = storage.get_instance(Course, course_id)
+
+    syllabus = course.syllabus[1:-1]
+
+    syllabus = syllabus.split(",")
+
+    print(syllabus)
+
+    course.syllabus = syllabus
 
     if course:
         return jsonify(course.to_dict()), 200

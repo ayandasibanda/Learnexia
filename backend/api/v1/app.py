@@ -25,6 +25,8 @@ elif auth_type == 'basic_auth':
 elif auth_type== "session_db_auth":
     auth = SessionDBAuth()
 
+cors = CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
+
 @app.errorhandler(404)
 def not_found(error) -> str:
     """ Not found handler

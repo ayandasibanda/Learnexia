@@ -1,1 +1,810 @@
-{"2cdfb2f0-90f3-4aff-92c0-d73855d674a9": {"Question.1957ab0b-5654-4c87-9ec6-f5dfd87c6549": {"created_at": "2024-10-28T19:57:49.396067", "updated_at": "2024-10-28T19:57:49.399187", "id": "1957ab0b-5654-4c87-9ec6-f5dfd87c6549", "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9", "question": "Which of the following is the correct HTML structure for a web page?", "options": "[<html> <head> </head> <body> </body> </html>, <html> <body> </body> <head> </head> </html>, <body> <html> </html> <head> </head> <body>]", "answer": 0, "__class__": "Question"}, "Question.79a621e9-4233-4034-b165-6ed219a994bf": {"updated_at": "2024-10-29T11:20:47.606060", "created_at": "2024-10-29T11:20:47.606019", "id": "79a621e9-4233-4034-b165-6ed219a994bf", "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9", "question": "Which HTML attribute is used to specify an inline style?", "options": "[class,style,font]", "answer": 1, "__class__": "Question"}, "Question.0c6fe56e-81d2-4770-b187-7f00297410b9": {"updated_at": "2024-10-29T11:20:47.606665", "created_at": "2024-10-29T11:20:47.606632", "id": "0c6fe56e-81d2-4770-b187-7f00297410b9", "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9", "question": "What is the correct way to link an external CSS file?", "answer": 0, "__class__": "Question"}, "Question.7e598fdd-e04d-44db-84d3-82b54d1858d1": {"updated_at": "2024-10-29T11:20:47.607158", "created_at": "2024-10-29T11:20:47.607130", "id": "7e598fdd-e04d-44db-84d3-82b54d1858d1", "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9", "question": "Which CSS property controls the text size?", "options": "[font-size,text-size,font-style]", "answer": 0, "__class__": "Question"}, "Question.7c92ee03-d539-40a7-bed7-48e0316023a5": {"updated_at": "2024-10-29T11:20:47.607518", "created_at": "2024-10-29T11:20:47.607489", "id": "7c92ee03-d539-40a7-bed7-48e0316023a5", "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9", "question": "Which HTML element is used to create an unordered list?", "options": "[<ol>,<ul>,<list>]", "answer": 1, "__class__": "Question"}, "Question.38090cd9-dbf8-4e40-ac84-8c9cd1e23462": {"updated_at": "2024-10-29T11:20:47.607897", "created_at": "2024-10-29T11:20:47.607874", "id": "38090cd9-dbf8-4e40-ac84-8c9cd1e23462", "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9", "question": "Which HTML tag is used to define an input field for a form?", "options": "[<input>,<textfield>,<forminput>]", "answer": 0, "__class__": "Question"}, "Question.3581e1b0-c29b-4ef7-b836-4db65e1fd4c9": {"updated_at": "2024-10-29T11:20:47.608230", "created_at": "2024-10-29T11:20:47.608205", "id": "3581e1b0-c29b-4ef7-b836-4db65e1fd4c9", "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9", "question": "What does the CSS property 'display: none;' do?", "options": "[It hides the element,It makes the element visible,It changes the color of the element]", "answer": 0, "__class__": "Question"}, "Question.4740f562-608b-46a1-b741-a68724194bed": {"updated_at": "2024-10-29T11:20:47.608598", "created_at": "2024-10-29T11:20:47.608571", "id": "4740f562-608b-46a1-b741-a68724194bed", "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9", "question": "What is the purpose of the <alt> attribute in an <img> tag?", "options": "[To provide alternative text for the image,To specify the image's height,To define the image source]", "answer": 0, "__class__": "Question"}, "Question.78429a94-26bd-48d9-9509-802791a81fa4": {"updated_at": "2024-10-29T11:20:47.608938", "created_at": "2024-10-29T11:20:47.608912", "id": "78429a94-26bd-48d9-9509-802791a81fa4", "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9", "question": "Which property is used to change the font of an element in CSS?", "options": "[font-family,text-font,font-style]", "answer": 0, "__class__": "Question"}, "Question.90705d5a-2463-4e3d-b43b-17ae5ab33dcc": {"updated_at": "2024-10-29T11:20:47.609259", "created_at": "2024-10-29T11:20:47.609236", "id": "90705d5a-2463-4e3d-b43b-17ae5ab33dcc", "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9", "question": "How do you create a hyperlink in HTML?", "answer": 0, "__class__": "Question"}, "Question.9fd7ebf7-10ef-4348-b0c8-b9898bc34fbe": {"updated_at": "2024-10-29T11:20:47.609667", "created_at": "2024-10-29T11:20:47.609642", "id": "9fd7ebf7-10ef-4348-b0c8-b9898bc34fbe", "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9", "question": "What is the correct HTML element to define emphasized text?", "options": "[<em>,<strong>,<italic>]", "answer": 0, "__class__": "Question"}, "Question.f2e0879e-f147-4dd4-8e8c-610dd1cd10a1": {"updated_at": "2024-10-29T11:20:47.610495", "created_at": "2024-10-29T11:20:47.610476", "id": "f2e0879e-f147-4dd4-8e8c-610dd1cd10a1", "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9", "question": "Which CSS property controls the text size?", "options": "[text-size,font-size,text-style]", "answer": 1, "__class__": "Question"}, "Question.343bf440-e87c-445e-b95c-bc83f645657c": {"updated_at": "2024-10-29T11:20:47.610879", "created_at": "2024-10-29T11:20:47.610860", "id": "343bf440-e87c-445e-b95c-bc83f645657c", "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9", "question": "What is the purpose of the <title> element in HTML?", "options": "[To display the title of the document in the browser tab,To provide the main heading of the web page,To create a link to another page]", "answer": 0, "__class__": "Question"}, "Question.cf1e84ad-ec98-4854-b2e4-82a9c3bb38d1": {"updated_at": "2024-10-29T11:20:47.611219", "created_at": "2024-10-29T11:20:47.611193", "id": "cf1e84ad-ec98-4854-b2e4-82a9c3bb38d1", "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9", "question": "How do you create an unordered list in HTML?", "options": "[<ul>...</ul>,<ol>...</ol>,<list>...</list>]", "answer": 0, "__class__": "Question"}, "Question.339900cb-6d75-4988-bea3-6676ec280b4f": {"updated_at": "2024-10-29T11:20:47.611538", "created_at": "2024-10-29T11:20:47.611516", "id": "339900cb-6d75-4988-bea3-6676ec280b4f", "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9", "question": "What does the 'float' property do in CSS?", "options": "[It moves an element to the left or right of its container,It makes an element transparent,It sets the position of an element]", "answer": 0, "__class__": "Question"}, "Question.fe05c12b-b05a-4d7c-bec2-b684af82717f": {"updated_at": "2024-10-29T11:20:47.611923", "created_at": "2024-10-29T11:20:47.611908", "id": "fe05c12b-b05a-4d7c-bec2-b684af82717f", "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9", "question": "What HTML attribute is used to define inline styles?", "options": "[style,class,id]", "answer": 0, "__class__": "Question"}, "Question.9bbad68f-735d-4500-b347-c9c8e5a0c0d5": {"updated_at": "2024-10-29T11:20:47.612393", "created_at": "2024-10-29T11:20:47.612379", "id": "9bbad68f-735d-4500-b347-c9c8e5a0c0d5", "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9", "question": "Which of the following is a valid way to link an external CSS file?", "answer": 0, "__class__": "Question"}, "Question.1e9da265-68de-4bb2-b419-c464480b8fa4": {"updated_at": "2024-10-29T11:20:47.612977", "created_at": "2024-10-29T11:20:47.612950", "id": "1e9da265-68de-4bb2-b419-c464480b8fa4", "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9", "question": "What is the purpose of the <div> tag in HTML?", "options": "[To create a division or section in an HTML document,To define a paragraph,To add an image]", "answer": 0, "__class__": "Question"}, "Question.bd3d3199-46a3-4a6c-ab16-be9737c0fd9d": {"updated_at": "2024-10-29T11:20:47.613516", "created_at": "2024-10-29T11:20:47.613488", "id": "bd3d3199-46a3-4a6c-ab16-be9737c0fd9d", "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9", "question": "Which property is used to change the font of an element in CSS?", "options": "[font-family,font-style,text-font]", "answer": 0, "__class__": "Question"}, "Question.328beaa7-e4c1-4b53-9dc7-6aec4cfe0f59": {"updated_at": "2024-10-29T11:20:47.614410", "created_at": "2024-10-29T11:20:47.614343", "id": "328beaa7-e4c1-4b53-9dc7-6aec4cfe0f59", "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9", "question": "How can you create a hyperlink in HTML?", "answer": 0, "__class__": "Question"}}, "7017c8c4-4569-4695-9932-eb97664d3305": {"Question.1": {"updated_at": "2024-10-29T12:28:32.793913", "created_at": "2024-10-29T12:28:32.793892", "id": 1, "answer": 0, "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "__class__": "Question"}, "Question.2": {"updated_at": "2024-10-29T12:28:32.795516", "created_at": "2024-10-29T12:28:32.795497", "id": 2, "answer": 1, "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "__class__": "Question"}, "Question.3": {"updated_at": "2024-10-29T12:28:32.796039", "created_at": "2024-10-29T12:28:32.796020", "id": 3, "answer": 1, "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "__class__": "Question"}, "Question.4": {"updated_at": "2024-10-29T12:28:32.796520", "created_at": "2024-10-29T12:28:32.796504", "id": 4, "answer": 1, "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "__class__": "Question"}, "Question.5": {"updated_at": "2024-10-29T12:28:32.796913", "created_at": "2024-10-29T12:28:32.796897", "id": 5, "answer": 0, "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "__class__": "Question"}, "Question.6": {"updated_at": "2024-10-29T12:28:32.797434", "created_at": "2024-10-29T12:28:32.797417", "id": 6, "answer": 0, "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "__class__": "Question"}, "Question.7": {"updated_at": "2024-10-29T12:28:32.797926", "created_at": "2024-10-29T12:28:32.797910", "id": 7, "answer": 0, "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "__class__": "Question"}, "Question.8": {"updated_at": "2024-10-29T12:28:32.798413", "created_at": "2024-10-29T12:28:32.798393", "id": 8, "answer": 0, "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "__class__": "Question"}, "Question.9": {"updated_at": "2024-10-29T12:28:32.798801", "created_at": "2024-10-29T12:28:32.798796", "id": 9, "answer": 3, "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "__class__": "Question"}, "Question.10": {"updated_at": "2024-10-29T12:28:32.799410", "created_at": "2024-10-29T12:28:32.799392", "id": 10, "answer": 0, "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "__class__": "Question"}, "Question.11": {"updated_at": "2024-10-29T12:28:32.799794", "created_at": "2024-10-29T12:28:32.799778", "id": 11, "answer": 0, "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "__class__": "Question"}, "Question.12": {"updated_at": "2024-10-29T12:28:32.800287", "created_at": "2024-10-29T12:28:32.800271", "id": 12, "answer": 1, "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "__class__": "Question"}, "Question.13": {"updated_at": "2024-10-29T12:28:32.800933", "created_at": "2024-10-29T12:28:32.800912", "id": 13, "answer": 0, "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "__class__": "Question"}, "Question.c3f0ea4f-0f81-4a20-b683-1b65609f5239": {"updated_at": "2024-10-29T12:48:03.792401", "created_at": "2024-10-29T12:48:03.792361", "id": "c3f0ea4f-0f81-4a20-b683-1b65609f5239", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "Which of the following is a method for creating an IIFE (Immediately Invoked Function Expression)?", "answer": 1, "__class__": "Question"}, "Question.f02e19c1-91cb-4dd2-9166-fa26cc00fdbc": {"updated_at": "2024-10-29T12:48:03.792962", "created_at": "2024-10-29T12:48:03.792944", "id": "f02e19c1-91cb-4dd2-9166-fa26cc00fdbc", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "What does AJAX stand for?", "answer": 0, "__class__": "Question"}, "Question.e15d9ec6-a7cb-4371-8b9f-5cdfc1b570a9": {"updated_at": "2024-10-29T12:48:03.793938", "created_at": "2024-10-29T12:48:03.793909", "id": "e15d9ec6-a7cb-4371-8b9f-5cdfc1b570a9", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "What is a closure?", "answer": 1, "__class__": "Question"}, "Question.37244090-96f3-4c7c-a7bb-08bffab50adf": {"updated_at": "2024-10-29T12:48:03.794531", "created_at": "2024-10-29T12:48:03.794502", "id": "37244090-96f3-4c7c-a7bb-08bffab50adf", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "Which keyword is used to create a class in ES6?", "options": "['class','define','create','function']", "answer": 0, "__class__": "Question"}, "Question.0485290d-5f2a-41fa-9e69-901aed978c97": {"updated_at": "2024-10-29T12:48:03.795071", "created_at": "2024-10-29T12:48:03.795047", "id": "0485290d-5f2a-41fa-9e69-901aed978c97", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "What does the 'this' keyword refer to in a regular function?", "answer": 0, "__class__": "Question"}, "Question.7076a6fb-c7ff-437c-9a1b-c90ee9a5d491": {"updated_at": "2024-10-29T12:48:03.795673", "created_at": "2024-10-29T12:48:03.795660", "id": "7076a6fb-c7ff-437c-9a1b-c90ee9a5d491", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "How do you call a function that returns another function?", "options": "['Higher-order function','Callback function','Nested function','Immediate function']", "answer": 0, "__class__": "Question"}, "Question.588f3108-4184-42e1-892d-c75b44d244c7": {"updated_at": "2024-10-29T12:48:03.796164", "created_at": "2024-10-29T12:48:03.796152", "id": "588f3108-4184-42e1-892d-c75b44d244c7", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "What is the purpose of the 'super' keyword?", "answer": 0, "__class__": "Question"}, "Question.f7b5d643-245d-440f-a5a8-fd529e6cc544": {"updated_at": "2024-10-29T12:48:03.796691", "created_at": "2024-10-29T12:48:03.796669", "id": "f7b5d643-245d-440f-a5a8-fd529e6cc544", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "Which of the following is NOT a method of creating a promise?", "options": "['Promise.resolve()','new Promise()','Promise.all()','Promise.create()']", "answer": 3, "__class__": "Question"}, "Question.d5d609e4-3d4d-432b-9ab7-0ca0e09fc815": {"updated_at": "2024-10-29T12:48:03.797170", "created_at": "2024-10-29T12:48:03.797149", "id": "d5d609e4-3d4d-432b-9ab7-0ca0e09fc815", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "What is the output of the following code: console.log(typeof null)?", "options": "['\"object\"','\"null\"','\"undefined\"','\"string\"']", "answer": 0, "__class__": "Question"}, "Question.a451c722-e8be-4b9e-ad64-71fe49493c74": {"updated_at": "2024-10-29T12:48:03.797646", "created_at": "2024-10-29T12:48:03.797625", "id": "a451c722-e8be-4b9e-ad64-71fe49493c74", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "What does IIFE stand for?", "answer": 0, "__class__": "Question"}, "Question.bf6bcd7e-de7a-4252-a5d8-15d2a9b2d88d": {"updated_at": "2024-10-29T12:48:03.798262", "created_at": "2024-10-29T12:48:03.798239", "id": "bf6bcd7e-de7a-4252-a5d8-15d2a9b2d88d", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "What is the purpose of function currying?", "answer": 1, "__class__": "Question"}, "Question.261042cf-b6a0-402f-9aa2-a11f1848261e": {"updated_at": "2024-10-29T12:48:03.798983", "created_at": "2024-10-29T12:48:03.798953", "id": "261042cf-b6a0-402f-9aa2-a11f1848261e", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "What is the 'this' keyword in JavaScript?", "answer": 0, "__class__": "Question"}, "Question.fd631ad2-5acb-41e7-9f52-ea26cf249046": {"updated_at": "2024-10-29T12:49:10.811259", "created_at": "2024-10-29T12:49:10.811218", "id": "fd631ad2-5acb-41e7-9f52-ea26cf249046", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "Which of the following is a method for creating an IIFE (Immediately Invoked Function Expression)?", "options": "['function() {}()','(function() {})()','function(){}','None of the above']", "answer": 1, "__class__": "Question"}, "Question.8fa398b6-39e6-47bf-bdcd-6d5fd693508f": {"updated_at": "2024-10-29T12:49:10.811998", "created_at": "2024-10-29T12:49:10.811971", "id": "8fa398b6-39e6-47bf-bdcd-6d5fd693508f", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "What does AJAX stand for?", "options": "['Asynchronous JavaScript and XML','Automated JavaScript and XML','Asynchronous Java and XHTML','None of the above']", "answer": 0, "__class__": "Question"}, "Question.2ac7bce0-be72-4f0d-9651-33e4f18ebaa4": {"updated_at": "2024-10-29T12:49:10.814129", "created_at": "2024-10-29T12:49:10.814083", "id": "2ac7bce0-be72-4f0d-9651-33e4f18ebaa4", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "What is a closure?", "options": "['A function that is called immediately','A function that retains access to its lexical scope','A special type of object','None of the above']", "answer": 1, "__class__": "Question"}, "Question.2a892cdf-b7f0-4a0d-b11b-2fb7065b72a9": {"updated_at": "2024-10-29T12:49:10.814835", "created_at": "2024-10-29T12:49:10.814808", "id": "2a892cdf-b7f0-4a0d-b11b-2fb7065b72a9", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "Which keyword is used to create a class in ES6?", "options": "['class','define','create','function']", "answer": 0, "__class__": "Question"}, "Question.3d1f6179-b364-4ee4-b8eb-2123dcaaa7cc": {"updated_at": "2024-10-29T12:49:10.815409", "created_at": "2024-10-29T12:49:10.815397", "id": "3d1f6179-b364-4ee4-b8eb-2123dcaaa7cc", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "What does the 'this' keyword refer to in a regular function?", "options": "['The global object','The function itself','The object that called the function','None of the above']", "answer": 0, "__class__": "Question"}, "Question.e4a1e135-1d16-46b7-b3da-3330f986dedc": {"updated_at": "2024-10-29T12:49:10.816326", "created_at": "2024-10-29T12:49:10.816299", "id": "e4a1e135-1d16-46b7-b3da-3330f986dedc", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "How do you call a function that returns another function?", "options": "['Higher-order function','Callback function','Nested function','Immediate function']", "answer": 0, "__class__": "Question"}, "Question.1e6017a4-6334-4d22-b20a-df2dab2f880f": {"updated_at": "2024-10-29T12:49:10.817064", "created_at": "2024-10-29T12:49:10.817038", "id": "1e6017a4-6334-4d22-b20a-df2dab2f880f", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "What is the purpose of the 'super' keyword?", "options": "['To call a parent class's constructor','To define a private variable','To create a static method','To return a value from a function']", "answer": 0, "__class__": "Question"}, "Question.95be9248-5b30-40f7-a3f6-7eedfe5c149e": {"updated_at": "2024-10-29T12:49:10.817829", "created_at": "2024-10-29T12:49:10.817803", "id": "95be9248-5b30-40f7-a3f6-7eedfe5c149e", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "Which of the following is NOT a method of creating a promise?", "options": "['Promise.resolve()','new Promise()','Promise.all()','Promise.create()']", "answer": 3, "__class__": "Question"}, "Question.32d2286d-d727-454a-af08-e0aa937c6c49": {"updated_at": "2024-10-29T12:49:10.818916", "created_at": "2024-10-29T12:49:10.818884", "id": "32d2286d-d727-454a-af08-e0aa937c6c49", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "What is the output of the following code: console.log(typeof null)?", "options": "['\"object\"','\"null\"','\"undefined\"','\"string\"']", "answer": 0, "__class__": "Question"}, "Question.302911c7-a40a-43de-bef7-5c821d77838a": {"updated_at": "2024-10-29T12:49:10.819633", "created_at": "2024-10-29T12:49:10.819600", "id": "302911c7-a40a-43de-bef7-5c821d77838a", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "What does IIFE stand for?", "options": "['Immediately Invoked Function Expression','Internal Immediate Function Execution','Instantly Invoked Function Execution','Immediate Internal Function Expression']", "answer": 0, "__class__": "Question"}, "Question.cd3dab02-39c0-4314-9048-23b1b944d6ea": {"updated_at": "2024-10-29T12:49:10.820368", "created_at": "2024-10-29T12:49:10.820343", "id": "cd3dab02-39c0-4314-9048-23b1b944d6ea", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "What is the purpose of function currying?", "options": "['To convert a function into a string','To create a new function that can be called with fewer arguments','To enhance the performance of a function','To invoke a function multiple times']", "answer": 1, "__class__": "Question"}, "Question.97911a2d-31ea-4e74-b62d-8286a6a6bae2": {"updated_at": "2024-10-29T12:49:10.821096", "created_at": "2024-10-29T12:49:10.821068", "id": "97911a2d-31ea-4e74-b62d-8286a6a6bae2", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "What is the 'this' keyword in JavaScript?", "options": "['It refers to the current object context','It always refers to the global object','It refers to the parent function','It is a reserved keyword with no value']", "answer": 0, "__class__": "Question"}, "Question.3a6a6518-d6af-47d7-bb6e-c0bf7f197e0d": {"updated_at": "2024-10-29T12:49:10.821809", "created_at": "2024-10-29T12:49:10.821785", "id": "3a6a6518-d6af-47d7-bb6e-c0bf7f197e0d", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "Which of the following correctly creates a closure?", "options": "['function outer() { function inner() {} ;}','var x = 10; function inner() { console.log(x); }','function inner() { var x = 10; }','function outer() { var x = 10; return inner(); }']", "answer": 1, "__class__": "Question"}, "Question.b964bf88-b68a-4b71-bdf5-a50bf71a6234": {"updated_at": "2024-10-29T12:49:10.822504", "created_at": "2024-10-29T12:49:10.822471", "id": "b964bf88-b68a-4b71-bdf5-a50bf71a6234", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "What is an Immediately Invoked Function Expression (IIFE)?", "options": "['A function that runs only once','A function that is executed after being defined','A function that is executed immediately after its definition','A function that returns another function']", "answer": 2, "__class__": "Question"}, "Question.ac45708f-6e64-45e2-9093-298b364fe0f2": {"updated_at": "2024-10-29T12:49:10.823319", "created_at": "2024-10-29T12:49:10.823282", "id": "ac45708f-6e64-45e2-9093-298b364fe0f2", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "Which of the following statements is true about higher-order functions?", "options": "['They can take another function as an argument','They cannot return a function','They can only work with numbers','They must be defined using the function keyword']", "answer": 0, "__class__": "Question"}, "Question.b5163fc8-bccb-456c-98de-920af66df414": {"updated_at": "2024-10-29T12:49:10.824472", "created_at": "2024-10-29T12:49:10.824415", "id": "b5163fc8-bccb-456c-98de-920af66df414", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "What does the super keyword do in ES6 classes?", "options": "['It calls the parent class's constructor','It creates a new object','It binds a function to the current object','It references the parent class's prototype']", "answer": 0, "__class__": "Question"}, "Question.6d6a7048-e03f-4b6a-8c48-14fe31150675": {"updated_at": "2024-10-29T12:49:10.841142", "created_at": "2024-10-29T12:49:10.841086", "id": "6d6a7048-e03f-4b6a-8c48-14fe31150675", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "What is the main advantage of using Promises in JavaScript?", "options": "['They allow for synchronous code execution','They provide better error handling compared to callbacks','They can only resolve to string values','They must be used with async/await']", "answer": 1, "__class__": "Question"}, "Question.60d1e9f4-4ac7-4150-9f57-6e17b721287a": {"updated_at": "2024-10-29T12:49:10.842498", "created_at": "2024-10-29T12:49:10.842455", "id": "60d1e9f4-4ac7-4150-9f57-6e17b721287a", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "What does the fetch() function return?", "options": "['A promise that resolves to the response of the request','The data received from the server','The status code of the response','An XMLHttpRequest object']", "answer": 0, "__class__": "Question"}, "Question.b69131da-4646-49d4-90be-18d421d9480d": {"updated_at": "2024-10-29T12:49:10.843578", "created_at": "2024-10-29T12:49:10.843531", "id": "b69131da-4646-49d4-90be-18d421d9480d", "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305", "question": "How can you handle errors when using async/await?", "options": "['By using a try...catch block','By checking the status of the promise','By using the Promise.all() method','By using the .then() method']", "answer": 0, "__class__": "Question"}}, "0b206260-38f5-4748-aef7-d7fb74b6bae7": {"Question.af44f14e-5425-4473-b7eb-2b49fb8ca421": {"updated_at": "2024-10-29T13:11:06.663757", "created_at": "2024-10-29T13:11:06.663715", "id": "af44f14e-5425-4473-b7eb-2b49fb8ca421", "quiz_id": "0b206260-38f5-4748-aef7-d7fb74b6bae7", "question": "What is JavaScript primarily used for?", "options": "['Styling web pages','Structuring web pages','Adding interactivity to web pages','Server-side scripting']", "answer": 2, "__class__": "Question"}, "Question.d9dc3249-c039-4222-b484-ab0a8e77a3eb": {"updated_at": "2024-10-29T13:11:06.665392", "created_at": "2024-10-29T13:11:06.665360", "id": "d9dc3249-c039-4222-b484-ab0a8e77a3eb", "quiz_id": "0b206260-38f5-4748-aef7-d7fb74b6bae7", "question": "How do you create a variable in JavaScript?", "options": "['var x = 10;','variable x = 10;','let x == 10;','int x = 10;']", "answer": 0, "__class__": "Question"}, "Question.e2e82a28-7fbb-4262-8b13-31b99cda056d": {"updated_at": "2024-10-29T13:11:06.666237", "created_at": "2024-10-29T13:11:06.666213", "id": "e2e82a28-7fbb-4262-8b13-31b99cda056d", "quiz_id": "0b206260-38f5-4748-aef7-d7fb74b6bae7", "question": "What does 'console.log()' do in JavaScript?", "options": "['Displays data on the webpage','Logs data to the console','Saves data to a file','Sends data to the server']", "answer": 1, "__class__": "Question"}, "Question.6b9c2158-06ee-4cf1-8bfe-2f3837cfa030": {"updated_at": "2024-10-29T13:11:06.667030", "created_at": "2024-10-29T13:11:06.667018", "id": "6b9c2158-06ee-4cf1-8bfe-2f3837cfa030", "quiz_id": "0b206260-38f5-4748-aef7-d7fb74b6bae7", "question": "Which of the following is a correct way to declare a function in JavaScript?", "options": "['function myFunction() {}','function:myFunction() {}','myFunction() = function {};','function = myFunction() {};']", "answer": 0, "__class__": "Question"}, "Question.8d63071a-57ef-4086-ba6a-999e224ff429": {"updated_at": "2024-10-29T13:11:06.668161", "created_at": "2024-10-29T13:11:06.668138", "id": "8d63071a-57ef-4086-ba6a-999e224ff429", "quiz_id": "0b206260-38f5-4748-aef7-d7fb74b6bae7", "question": "What will the following code output: console.log(typeof \"Hello\");?", "options": "['\"string\"','\"text\"','\"undefined\"','\"object\"']", "answer": 0, "__class__": "Question"}, "Question.1233fa8d-e3b1-4ee9-bbbd-afc4468b8e12": {"updated_at": "2024-10-29T13:11:06.668966", "created_at": "2024-10-29T13:11:06.668943", "id": "1233fa8d-e3b1-4ee9-bbbd-afc4468b8e12", "quiz_id": "0b206260-38f5-4748-aef7-d7fb74b6bae7", "question": "Which of the following is a JavaScript data type?", "options": "['Number','String','Boolean','All of the above']", "answer": 3, "__class__": "Question"}, "Question.a5ac6331-5f9a-488d-832a-33e117fec33c": {"updated_at": "2024-10-29T13:11:06.669825", "created_at": "2024-10-29T13:11:06.669802", "id": "a5ac6331-5f9a-488d-832a-33e117fec33c", "quiz_id": "0b206260-38f5-4748-aef7-d7fb74b6bae7", "question": "How can you add a comment in JavaScript?", "options": "['// This is a comment','<!-- This is a comment -->','* This is a comment *','# This is a comment']", "answer": 0, "__class__": "Question"}, "Question.a44e3a47-bb7b-43dc-b9aa-ac6654ed087b": {"updated_at": "2024-10-29T13:11:06.670798", "created_at": "2024-10-29T13:11:06.670745", "id": "a44e3a47-bb7b-43dc-b9aa-ac6654ed087b", "quiz_id": "0b206260-38f5-4748-aef7-d7fb74b6bae7", "question": "What is the purpose of the 'if...else' statement in JavaScript?", "options": "['To repeat a block of code','To execute code based on a condition','To declare a function','To create a loop']", "answer": 1, "__class__": "Question"}, "Question.9c9e4369-e214-4408-9292-fbc98342ba08": {"updated_at": "2024-10-29T13:11:06.671620", "created_at": "2024-10-29T13:11:06.671593", "id": "9c9e4369-e214-4408-9292-fbc98342ba08", "quiz_id": "0b206260-38f5-4748-aef7-d7fb74b6bae7", "question": "What will the following code output: console.log(2 + '2');?", "options": "['4','22','\"22\"','\"4\"']", "answer": 2, "__class__": "Question"}, "Question.1242a0ec-6f2d-4a3e-b7c0-3a56ec48e71c": {"updated_at": "2024-10-29T13:11:06.672593", "created_at": "2024-10-29T13:11:06.672550", "id": "1242a0ec-6f2d-4a3e-b7c0-3a56ec48e71c", "quiz_id": "0b206260-38f5-4748-aef7-d7fb74b6bae7", "question": "Which of the following is the correct way to declare a variable?", "options": "['var x;','variable x;','x = var;','declare x;']", "answer": 0, "__class__": "Question"}, "Question.ac30e227-55f9-4bb7-bd83-a4e052bd90b1": {"updated_at": "2024-10-29T13:11:06.673629", "created_at": "2024-10-29T13:11:06.673587", "id": "ac30e227-55f9-4bb7-bd83-a4e052bd90b1", "quiz_id": "0b206260-38f5-4748-aef7-d7fb74b6bae7", "question": "What does the 'break' statement do in a loop?", "options": "['Exits the current loop','Continues to the next iteration','Restarts the loop','Stops the program']", "answer": 0, "__class__": "Question"}, "Question.868d37ef-4e07-46e8-84f4-535f2a8974ca": {"updated_at": "2024-10-29T13:11:06.674609", "created_at": "2024-10-29T13:11:06.674579", "id": "868d37ef-4e07-46e8-84f4-535f2a8974ca", "quiz_id": "0b206260-38f5-4748-aef7-d7fb74b6bae7", "question": "How do you create a function in JavaScript?", "options": "['function myFunction() { }','create myFunction() { }','myFunction() = function { }','function:myFunction() { }']", "answer": 0, "__class__": "Question"}, "Question.a0726fe3-82b6-4c2c-a33e-4ed80dfaab47": {"updated_at": "2024-10-29T13:11:06.675606", "created_at": "2024-10-29T13:11:06.675572", "id": "a0726fe3-82b6-4c2c-a33e-4ed80dfaab47", "quiz_id": "0b206260-38f5-4748-aef7-d7fb74b6bae7", "question": "Which of the following is a valid way to create an array in JavaScript?", "options": "['var myArray = [1, 2, 3];','var myArray = ( 1, 2, 3 );','var myArray = {1, 2, 3};','var myArray =< 1, 2, 3 >;']", "answer": 0, "__class__": "Question"}, "Question.51eccc7f-ce54-4562-b238-3d936c21c3df": {"updated_at": "2024-10-29T13:11:06.678112", "created_at": "2024-10-29T13:11:06.678068", "id": "51eccc7f-ce54-4562-b238-3d936c21c3df", "quiz_id": "0b206260-38f5-4748-aef7-d7fb74b6bae7", "question": "What does the 'typeof' operator do?", "options": "['Determines the type of a variable','Changes the type of a variable','Returns a string representation of the variable','Both a and c']", "answer": 3, "__class__": "Question"}, "Question.91fa977e-b7c7-49b7-9cb9-d45eb075e40b": {"updated_at": "2024-10-29T13:11:06.694158", "created_at": "2024-10-29T13:11:06.694104", "id": "91fa977e-b7c7-49b7-9cb9-d45eb075e40b", "quiz_id": "0b206260-38f5-4748-aef7-d7fb74b6bae7", "question": "What is the output of 'console.log(!!\"\");'?", "options": "['true','false','undefined','null']", "answer": 1, "__class__": "Question"}, "Question.8a5c3cf2-266a-44a9-818b-9032e9c4767c": {"updated_at": "2024-10-29T13:11:06.695454", "created_at": "2024-10-29T13:11:06.695415", "id": "8a5c3cf2-266a-44a9-818b-9032e9c4767c", "quiz_id": "0b206260-38f5-4748-aef7-d7fb74b6bae7", "question": "Which keyword is used to prevent further modification of an object?", "options": "['const','let','final','freeze']", "answer": 3, "__class__": "Question"}, "Question.29c2c779-a09d-448d-a751-6202ea9246f4": {"updated_at": "2024-10-29T13:11:06.696639", "created_at": "2024-10-29T13:11:06.696585", "id": "29c2c779-a09d-448d-a751-6202ea9246f4", "quiz_id": "0b206260-38f5-4748-aef7-d7fb74b6bae7", "question": "What will the following code output: console.log(1 == '1');?", "options": "['true','false','TypeError','undefined']", "answer": 0, "__class__": "Question"}, "Question.40c8dbe4-a719-4936-8d78-d5d345b7982a": {"updated_at": "2024-10-29T13:11:06.698036", "created_at": "2024-10-29T13:11:06.697980", "id": "40c8dbe4-a719-4936-8d78-d5d345b7982a", "quiz_id": "0b206260-38f5-4748-aef7-d7fb74b6bae7", "question": "Which of the following statements is used to create a function in JavaScript?", "options": "['function myFunction() { }','create function myFunction() { }','myFunction() => { }','function: myFunction() { }']", "answer": 0, "__class__": "Question"}, "Question.75710ebe-c56a-4e6f-9d21-688053ea8cfa": {"updated_at": "2024-10-29T13:11:06.699174", "created_at": "2024-10-29T13:11:06.699135", "id": "75710ebe-c56a-4e6f-9d21-688053ea8cfa", "quiz_id": "0b206260-38f5-4748-aef7-d7fb74b6bae7", "question": "What will be the result of the following code: console.log('5' + 3);?", "options": "['8','53','\"53\"','\"8\"']", "answer": 2, "__class__": "Question"}, "Question.ddad0859-4dc8-4c9e-912c-f7f263923f48": {"updated_at": "2024-10-29T13:11:06.700416", "created_at": "2024-10-29T13:11:06.700353", "id": "ddad0859-4dc8-4c9e-912c-f7f263923f48", "quiz_id": "0b206260-38f5-4748-aef7-d7fb74b6bae7", "question": "Which method can be used to convert a string to a number in JavaScript?", "options": "['parseInt()','Number()','Both a and b','toString()']", "answer": 2, "__class__": "Question"}}}
+{
+    "2cdfb2f0-90f3-4aff-92c0-d73855d674a9": {
+        "Question.1957ab0b-5654-4c87-9ec6-f5dfd87c6549": {
+            "created_at": "2024-10-28T19:57:49.396067",
+            "updated_at": "2024-10-28T19:57:49.399187",
+            "id": "1957ab0b-5654-4c87-9ec6-f5dfd87c6549",
+            "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
+            "question": "Which of the following is the correct HTML structure for a web page?",
+            "options": "[<html> <head> </head> <body> </body> </html>, <html> <body> </body> <head> </head> </html>, <body> <html> </html> <head> </head> <body>]",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.79a621e9-4233-4034-b165-6ed219a994bf": {
+            "updated_at": "2024-10-29T11:20:47.606060",
+            "created_at": "2024-10-29T11:20:47.606019",
+            "id": "79a621e9-4233-4034-b165-6ed219a994bf",
+            "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
+            "question": "Which HTML attribute is used to specify an inline style?",
+            "options": "[class,style,font]",
+            "answer": 1,
+            "__class__": "Question"
+        },
+        "Question.0c6fe56e-81d2-4770-b187-7f00297410b9": {
+            "updated_at": "2024-10-29T11:20:47.606665",
+            "created_at": "2024-10-29T11:20:47.606632",
+            "id": "0c6fe56e-81d2-4770-b187-7f00297410b9",
+            "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
+            "question": "What is the correct way to link an external CSS file?",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.7e598fdd-e04d-44db-84d3-82b54d1858d1": {
+            "updated_at": "2024-10-29T11:20:47.607158",
+            "created_at": "2024-10-29T11:20:47.607130",
+            "id": "7e598fdd-e04d-44db-84d3-82b54d1858d1",
+            "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
+            "question": "Which CSS property controls the text size?",
+            "options": "[font-size,text-size,font-style]",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.7c92ee03-d539-40a7-bed7-48e0316023a5": {
+            "updated_at": "2024-10-29T11:20:47.607518",
+            "created_at": "2024-10-29T11:20:47.607489",
+            "id": "7c92ee03-d539-40a7-bed7-48e0316023a5",
+            "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
+            "question": "Which HTML element is used to create an unordered list?",
+            "options": "[<ol>,<ul>,<list>]",
+            "answer": 1,
+            "__class__": "Question"
+        },
+        "Question.38090cd9-dbf8-4e40-ac84-8c9cd1e23462": {
+            "updated_at": "2024-10-29T11:20:47.607897",
+            "created_at": "2024-10-29T11:20:47.607874",
+            "id": "38090cd9-dbf8-4e40-ac84-8c9cd1e23462",
+            "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
+            "question": "Which HTML tag is used to define an input field for a form?",
+            "options": "[<input>,<textfield>,<forminput>]",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.3581e1b0-c29b-4ef7-b836-4db65e1fd4c9": {
+            "updated_at": "2024-10-29T11:20:47.608230",
+            "created_at": "2024-10-29T11:20:47.608205",
+            "id": "3581e1b0-c29b-4ef7-b836-4db65e1fd4c9",
+            "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
+            "question": "What does the CSS property 'display: none;' do?",
+            "options": "[It hides the element,It makes the element visible,It changes the color of the element]",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.4740f562-608b-46a1-b741-a68724194bed": {
+            "updated_at": "2024-10-29T11:20:47.608598",
+            "created_at": "2024-10-29T11:20:47.608571",
+            "id": "4740f562-608b-46a1-b741-a68724194bed",
+            "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
+            "question": "What is the purpose of the <alt> attribute in an <img> tag?",
+            "options": "[To provide alternative text for the image,To specify the image's height,To define the image source]",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.78429a94-26bd-48d9-9509-802791a81fa4": {
+            "updated_at": "2024-10-29T11:20:47.608938",
+            "created_at": "2024-10-29T11:20:47.608912",
+            "id": "78429a94-26bd-48d9-9509-802791a81fa4",
+            "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
+            "question": "Which property is used to change the font of an element in CSS?",
+            "options": "[font-family,text-font,font-style]",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.90705d5a-2463-4e3d-b43b-17ae5ab33dcc": {
+            "updated_at": "2024-10-29T11:20:47.609259",
+            "created_at": "2024-10-29T11:20:47.609236",
+            "id": "90705d5a-2463-4e3d-b43b-17ae5ab33dcc",
+            "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
+            "question": "How do you create a hyperlink in HTML?",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.9fd7ebf7-10ef-4348-b0c8-b9898bc34fbe": {
+            "updated_at": "2024-10-29T11:20:47.609667",
+            "created_at": "2024-10-29T11:20:47.609642",
+            "id": "9fd7ebf7-10ef-4348-b0c8-b9898bc34fbe",
+            "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
+            "question": "What is the correct HTML element to define emphasized text?",
+            "options": "[<em>,<strong>,<italic>]",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.f2e0879e-f147-4dd4-8e8c-610dd1cd10a1": {
+            "updated_at": "2024-10-29T11:20:47.610495",
+            "created_at": "2024-10-29T11:20:47.610476",
+            "id": "f2e0879e-f147-4dd4-8e8c-610dd1cd10a1",
+            "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
+            "question": "Which CSS property controls the text size?",
+            "options": "[text-size,font-size,text-style]",
+            "answer": 1,
+            "__class__": "Question"
+        },
+        "Question.343bf440-e87c-445e-b95c-bc83f645657c": {
+            "updated_at": "2024-10-29T11:20:47.610879",
+            "created_at": "2024-10-29T11:20:47.610860",
+            "id": "343bf440-e87c-445e-b95c-bc83f645657c",
+            "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
+            "question": "What is the purpose of the <title> element in HTML?",
+            "options": "[To display the title of the document in the browser tab,To provide the main heading of the web page,To create a link to another page]",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.cf1e84ad-ec98-4854-b2e4-82a9c3bb38d1": {
+            "updated_at": "2024-10-29T11:20:47.611219",
+            "created_at": "2024-10-29T11:20:47.611193",
+            "id": "cf1e84ad-ec98-4854-b2e4-82a9c3bb38d1",
+            "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
+            "question": "How do you create an unordered list in HTML?",
+            "options": "[<ul>...</ul>,<ol>...</ol>,<list>...</list>]",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.339900cb-6d75-4988-bea3-6676ec280b4f": {
+            "updated_at": "2024-10-29T11:20:47.611538",
+            "created_at": "2024-10-29T11:20:47.611516",
+            "id": "339900cb-6d75-4988-bea3-6676ec280b4f",
+            "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
+            "question": "What does the 'float' property do in CSS?",
+            "options": "[It moves an element to the left or right of its container,It makes an element transparent,It sets the position of an element]",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.fe05c12b-b05a-4d7c-bec2-b684af82717f": {
+            "updated_at": "2024-10-29T11:20:47.611923",
+            "created_at": "2024-10-29T11:20:47.611908",
+            "id": "fe05c12b-b05a-4d7c-bec2-b684af82717f",
+            "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
+            "question": "What HTML attribute is used to define inline styles?",
+            "options": "[style,class,id]",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.9bbad68f-735d-4500-b347-c9c8e5a0c0d5": {
+            "updated_at": "2024-10-29T11:20:47.612393",
+            "created_at": "2024-10-29T11:20:47.612379",
+            "id": "9bbad68f-735d-4500-b347-c9c8e5a0c0d5",
+            "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
+            "question": "Which of the following is a valid way to link an external CSS file?",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.1e9da265-68de-4bb2-b419-c464480b8fa4": {
+            "updated_at": "2024-10-29T11:20:47.612977",
+            "created_at": "2024-10-29T11:20:47.612950",
+            "id": "1e9da265-68de-4bb2-b419-c464480b8fa4",
+            "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
+            "question": "What is the purpose of the <div> tag in HTML?",
+            "options": "[To create a division or section in an HTML document,To define a paragraph,To add an image]",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.bd3d3199-46a3-4a6c-ab16-be9737c0fd9d": {
+            "updated_at": "2024-10-29T11:20:47.613516",
+            "created_at": "2024-10-29T11:20:47.613488",
+            "id": "bd3d3199-46a3-4a6c-ab16-be9737c0fd9d",
+            "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
+            "question": "Which property is used to change the font of an element in CSS?",
+            "options": "[font-family,font-style,text-font]",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.328beaa7-e4c1-4b53-9dc7-6aec4cfe0f59": {
+            "updated_at": "2024-10-29T11:20:47.614410",
+            "created_at": "2024-10-29T11:20:47.614343",
+            "id": "328beaa7-e4c1-4b53-9dc7-6aec4cfe0f59",
+            "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
+            "question": "How can you create a hyperlink in HTML?",
+            "answer": 0,
+            "__class__": "Question"
+        }
+    },
+    "7017c8c4-4569-4695-9932-eb97664d3305": {
+        "Question.1": {
+            "updated_at": "2024-10-29T12:28:32.793913",
+            "created_at": "2024-10-29T12:28:32.793892",
+            "id": 1,
+            "answer": 0,
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "__class__": "Question"
+        },
+        "Question.2": {
+            "updated_at": "2024-10-29T12:28:32.795516",
+            "created_at": "2024-10-29T12:28:32.795497",
+            "id": 2,
+            "answer": 1,
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "__class__": "Question"
+        },
+        "Question.3": {
+            "updated_at": "2024-10-29T12:28:32.796039",
+            "created_at": "2024-10-29T12:28:32.796020",
+            "id": 3,
+            "answer": 1,
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "__class__": "Question"
+        },
+        "Question.4": {
+            "updated_at": "2024-10-29T12:28:32.796520",
+            "created_at": "2024-10-29T12:28:32.796504",
+            "id": 4,
+            "answer": 1,
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "__class__": "Question"
+        },
+        "Question.5": {
+            "updated_at": "2024-10-29T12:28:32.796913",
+            "created_at": "2024-10-29T12:28:32.796897",
+            "id": 5,
+            "answer": 0,
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "__class__": "Question"
+        },
+        "Question.6": {
+            "updated_at": "2024-10-29T12:28:32.797434",
+            "created_at": "2024-10-29T12:28:32.797417",
+            "id": 6,
+            "answer": 0,
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "__class__": "Question"
+        },
+        "Question.7": {
+            "updated_at": "2024-10-29T12:28:32.797926",
+            "created_at": "2024-10-29T12:28:32.797910",
+            "id": 7,
+            "answer": 0,
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "__class__": "Question"
+        },
+        "Question.8": {
+            "updated_at": "2024-10-29T12:28:32.798413",
+            "created_at": "2024-10-29T12:28:32.798393",
+            "id": 8,
+            "answer": 0,
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "__class__": "Question"
+        },
+        "Question.9": {
+            "updated_at": "2024-10-29T12:28:32.798801",
+            "created_at": "2024-10-29T12:28:32.798796",
+            "id": 9,
+            "answer": 3,
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "__class__": "Question"
+        },
+        "Question.10": {
+            "updated_at": "2024-10-29T12:28:32.799410",
+            "created_at": "2024-10-29T12:28:32.799392",
+            "id": 10,
+            "answer": 0,
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "__class__": "Question"
+        },
+        "Question.11": {
+            "updated_at": "2024-10-29T12:28:32.799794",
+            "created_at": "2024-10-29T12:28:32.799778",
+            "id": 11,
+            "answer": 0,
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "__class__": "Question"
+        },
+        "Question.12": {
+            "updated_at": "2024-10-29T12:28:32.800287",
+            "created_at": "2024-10-29T12:28:32.800271",
+            "id": 12,
+            "answer": 1,
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "__class__": "Question"
+        },
+        "Question.13": {
+            "updated_at": "2024-10-29T12:28:32.800933",
+            "created_at": "2024-10-29T12:28:32.800912",
+            "id": 13,
+            "answer": 0,
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "__class__": "Question"
+        },
+        "Question.c3f0ea4f-0f81-4a20-b683-1b65609f5239": {
+            "updated_at": "2024-10-29T12:48:03.792401",
+            "created_at": "2024-10-29T12:48:03.792361",
+            "id": "c3f0ea4f-0f81-4a20-b683-1b65609f5239",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "Which of the following is a method for creating an IIFE (Immediately Invoked Function Expression)?",
+            "answer": 1,
+            "__class__": "Question"
+        },
+        "Question.f02e19c1-91cb-4dd2-9166-fa26cc00fdbc": {
+            "updated_at": "2024-10-29T12:48:03.792962",
+            "created_at": "2024-10-29T12:48:03.792944",
+            "id": "f02e19c1-91cb-4dd2-9166-fa26cc00fdbc",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "What does AJAX stand for?",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.e15d9ec6-a7cb-4371-8b9f-5cdfc1b570a9": {
+            "updated_at": "2024-10-29T12:48:03.793938",
+            "created_at": "2024-10-29T12:48:03.793909",
+            "id": "e15d9ec6-a7cb-4371-8b9f-5cdfc1b570a9",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "What is a closure?",
+            "answer": 1,
+            "__class__": "Question"
+        },
+        "Question.37244090-96f3-4c7c-a7bb-08bffab50adf": {
+            "updated_at": "2024-10-29T12:48:03.794531",
+            "created_at": "2024-10-29T12:48:03.794502",
+            "id": "37244090-96f3-4c7c-a7bb-08bffab50adf",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "Which keyword is used to create a class in ES6?",
+            "options": "['class','define','create','function']",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.0485290d-5f2a-41fa-9e69-901aed978c97": {
+            "updated_at": "2024-10-29T12:48:03.795071",
+            "created_at": "2024-10-29T12:48:03.795047",
+            "id": "0485290d-5f2a-41fa-9e69-901aed978c97",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "What does the 'this' keyword refer to in a regular function?",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.7076a6fb-c7ff-437c-9a1b-c90ee9a5d491": {
+            "updated_at": "2024-10-29T12:48:03.795673",
+            "created_at": "2024-10-29T12:48:03.795660",
+            "id": "7076a6fb-c7ff-437c-9a1b-c90ee9a5d491",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "How do you call a function that returns another function?",
+            "options": "['Higher-order function','Callback function','Nested function','Immediate function']",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.588f3108-4184-42e1-892d-c75b44d244c7": {
+            "updated_at": "2024-10-29T12:48:03.796164",
+            "created_at": "2024-10-29T12:48:03.796152",
+            "id": "588f3108-4184-42e1-892d-c75b44d244c7",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "What is the purpose of the 'super' keyword?",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.f7b5d643-245d-440f-a5a8-fd529e6cc544": {
+            "updated_at": "2024-10-29T12:48:03.796691",
+            "created_at": "2024-10-29T12:48:03.796669",
+            "id": "f7b5d643-245d-440f-a5a8-fd529e6cc544",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "Which of the following is NOT a method of creating a promise?",
+            "options": "['Promise.resolve()','new Promise()','Promise.all()','Promise.create()']",
+            "answer": 3,
+            "__class__": "Question"
+        },
+        "Question.d5d609e4-3d4d-432b-9ab7-0ca0e09fc815": {
+            "updated_at": "2024-10-29T12:48:03.797170",
+            "created_at": "2024-10-29T12:48:03.797149",
+            "id": "d5d609e4-3d4d-432b-9ab7-0ca0e09fc815",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "What is the output of the following code: console.log(typeof null)?",
+            "options": "['\"object\"','\"null\"','\"undefined\"','\"string\"']",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.a451c722-e8be-4b9e-ad64-71fe49493c74": {
+            "updated_at": "2024-10-29T12:48:03.797646",
+            "created_at": "2024-10-29T12:48:03.797625",
+            "id": "a451c722-e8be-4b9e-ad64-71fe49493c74",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "What does IIFE stand for?",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.bf6bcd7e-de7a-4252-a5d8-15d2a9b2d88d": {
+            "updated_at": "2024-10-29T12:48:03.798262",
+            "created_at": "2024-10-29T12:48:03.798239",
+            "id": "bf6bcd7e-de7a-4252-a5d8-15d2a9b2d88d",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "What is the purpose of function currying?",
+            "answer": 1,
+            "__class__": "Question"
+        },
+        "Question.261042cf-b6a0-402f-9aa2-a11f1848261e": {
+            "updated_at": "2024-10-29T12:48:03.798983",
+            "created_at": "2024-10-29T12:48:03.798953",
+            "id": "261042cf-b6a0-402f-9aa2-a11f1848261e",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "What is the 'this' keyword in JavaScript?",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.fd631ad2-5acb-41e7-9f52-ea26cf249046": {
+            "updated_at": "2024-10-29T12:49:10.811259",
+            "created_at": "2024-10-29T12:49:10.811218",
+            "id": "fd631ad2-5acb-41e7-9f52-ea26cf249046",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "Which of the following is a method for creating an IIFE (Immediately Invoked Function Expression)?",
+            "options": "['function() {}()','(function() {})()','function(){}','None of the above']",
+            "answer": 1,
+            "__class__": "Question"
+        },
+        "Question.8fa398b6-39e6-47bf-bdcd-6d5fd693508f": {
+            "updated_at": "2024-10-29T12:49:10.811998",
+            "created_at": "2024-10-29T12:49:10.811971",
+            "id": "8fa398b6-39e6-47bf-bdcd-6d5fd693508f",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "What does AJAX stand for?",
+            "options": "['Asynchronous JavaScript and XML','Automated JavaScript and XML','Asynchronous Java and XHTML','None of the above']",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.2ac7bce0-be72-4f0d-9651-33e4f18ebaa4": {
+            "updated_at": "2024-10-29T12:49:10.814129",
+            "created_at": "2024-10-29T12:49:10.814083",
+            "id": "2ac7bce0-be72-4f0d-9651-33e4f18ebaa4",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "What is a closure?",
+            "options": "['A function that is called immediately','A function that retains access to its lexical scope','A special type of object','None of the above']",
+            "answer": 1,
+            "__class__": "Question"
+        },
+        "Question.2a892cdf-b7f0-4a0d-b11b-2fb7065b72a9": {
+            "updated_at": "2024-10-29T12:49:10.814835",
+            "created_at": "2024-10-29T12:49:10.814808",
+            "id": "2a892cdf-b7f0-4a0d-b11b-2fb7065b72a9",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "Which keyword is used to create a class in ES6?",
+            "options": "['class','define','create','function']",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.3d1f6179-b364-4ee4-b8eb-2123dcaaa7cc": {
+            "updated_at": "2024-10-29T12:49:10.815409",
+            "created_at": "2024-10-29T12:49:10.815397",
+            "id": "3d1f6179-b364-4ee4-b8eb-2123dcaaa7cc",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "What does the 'this' keyword refer to in a regular function?",
+            "options": "['The global object','The function itself','The object that called the function','None of the above']",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.e4a1e135-1d16-46b7-b3da-3330f986dedc": {
+            "updated_at": "2024-10-29T12:49:10.816326",
+            "created_at": "2024-10-29T12:49:10.816299",
+            "id": "e4a1e135-1d16-46b7-b3da-3330f986dedc",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "How do you call a function that returns another function?",
+            "options": "['Higher-order function','Callback function','Nested function','Immediate function']",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.1e6017a4-6334-4d22-b20a-df2dab2f880f": {
+            "updated_at": "2024-10-29T12:49:10.817064",
+            "created_at": "2024-10-29T12:49:10.817038",
+            "id": "1e6017a4-6334-4d22-b20a-df2dab2f880f",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "What is the purpose of the 'super' keyword?",
+            "options": "['To call a parent class's constructor','To define a private variable','To create a static method','To return a value from a function']",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.95be9248-5b30-40f7-a3f6-7eedfe5c149e": {
+            "updated_at": "2024-10-29T12:49:10.817829",
+            "created_at": "2024-10-29T12:49:10.817803",
+            "id": "95be9248-5b30-40f7-a3f6-7eedfe5c149e",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "Which of the following is NOT a method of creating a promise?",
+            "options": "['Promise.resolve()','new Promise()','Promise.all()','Promise.create()']",
+            "answer": 3,
+            "__class__": "Question"
+        },
+        "Question.32d2286d-d727-454a-af08-e0aa937c6c49": {
+            "updated_at": "2024-10-29T12:49:10.818916",
+            "created_at": "2024-10-29T12:49:10.818884",
+            "id": "32d2286d-d727-454a-af08-e0aa937c6c49",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "What is the output of the following code: console.log(typeof null)?",
+            "options": "['\"object\"','\"null\"','\"undefined\"','\"string\"']",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.302911c7-a40a-43de-bef7-5c821d77838a": {
+            "updated_at": "2024-10-29T12:49:10.819633",
+            "created_at": "2024-10-29T12:49:10.819600",
+            "id": "302911c7-a40a-43de-bef7-5c821d77838a",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "What does IIFE stand for?",
+            "options": "['Immediately Invoked Function Expression','Internal Immediate Function Execution','Instantly Invoked Function Execution','Immediate Internal Function Expression']",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.cd3dab02-39c0-4314-9048-23b1b944d6ea": {
+            "updated_at": "2024-10-29T12:49:10.820368",
+            "created_at": "2024-10-29T12:49:10.820343",
+            "id": "cd3dab02-39c0-4314-9048-23b1b944d6ea",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "What is the purpose of function currying?",
+            "options": "['To convert a function into a string','To create a new function that can be called with fewer arguments','To enhance the performance of a function','To invoke a function multiple times']",
+            "answer": 1,
+            "__class__": "Question"
+        },
+        "Question.97911a2d-31ea-4e74-b62d-8286a6a6bae2": {
+            "updated_at": "2024-10-29T12:49:10.821096",
+            "created_at": "2024-10-29T12:49:10.821068",
+            "id": "97911a2d-31ea-4e74-b62d-8286a6a6bae2",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "What is the 'this' keyword in JavaScript?",
+            "options": "['It refers to the current object context','It always refers to the global object','It refers to the parent function','It is a reserved keyword with no value']",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.3a6a6518-d6af-47d7-bb6e-c0bf7f197e0d": {
+            "updated_at": "2024-10-29T12:49:10.821809",
+            "created_at": "2024-10-29T12:49:10.821785",
+            "id": "3a6a6518-d6af-47d7-bb6e-c0bf7f197e0d",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "Which of the following correctly creates a closure?",
+            "options": "['function outer() { function inner() {} ;}','var x = 10; function inner() { console.log(x); }','function inner() { var x = 10; }','function outer() { var x = 10; return inner(); }']",
+            "answer": 1,
+            "__class__": "Question"
+        },
+        "Question.b964bf88-b68a-4b71-bdf5-a50bf71a6234": {
+            "updated_at": "2024-10-29T12:49:10.822504",
+            "created_at": "2024-10-29T12:49:10.822471",
+            "id": "b964bf88-b68a-4b71-bdf5-a50bf71a6234",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "What is an Immediately Invoked Function Expression (IIFE)?",
+            "options": "['A function that runs only once','A function that is executed after being defined','A function that is executed immediately after its definition','A function that returns another function']",
+            "answer": 2,
+            "__class__": "Question"
+        },
+        "Question.ac45708f-6e64-45e2-9093-298b364fe0f2": {
+            "updated_at": "2024-10-29T12:49:10.823319",
+            "created_at": "2024-10-29T12:49:10.823282",
+            "id": "ac45708f-6e64-45e2-9093-298b364fe0f2",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "Which of the following statements is true about higher-order functions?",
+            "options": "['They can take another function as an argument','They cannot return a function','They can only work with numbers','They must be defined using the function keyword']",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.b5163fc8-bccb-456c-98de-920af66df414": {
+            "updated_at": "2024-10-29T12:49:10.824472",
+            "created_at": "2024-10-29T12:49:10.824415",
+            "id": "b5163fc8-bccb-456c-98de-920af66df414",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "What does the super keyword do in ES6 classes?",
+            "options": "['It calls the parent class's constructor','It creates a new object','It binds a function to the current object','It references the parent class's prototype']",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.6d6a7048-e03f-4b6a-8c48-14fe31150675": {
+            "updated_at": "2024-10-29T12:49:10.841142",
+            "created_at": "2024-10-29T12:49:10.841086",
+            "id": "6d6a7048-e03f-4b6a-8c48-14fe31150675",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "What is the main advantage of using Promises in JavaScript?",
+            "options": "['They allow for synchronous code execution','They provide better error handling compared to callbacks','They can only resolve to string values','They must be used with async/await']",
+            "answer": 1,
+            "__class__": "Question"
+        },
+        "Question.60d1e9f4-4ac7-4150-9f57-6e17b721287a": {
+            "updated_at": "2024-10-29T12:49:10.842498",
+            "created_at": "2024-10-29T12:49:10.842455",
+            "id": "60d1e9f4-4ac7-4150-9f57-6e17b721287a",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "What does the fetch() function return?",
+            "options": "['A promise that resolves to the response of the request','The data received from the server','The status code of the response','An XMLHttpRequest object']",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.b69131da-4646-49d4-90be-18d421d9480d": {
+            "updated_at": "2024-10-29T12:49:10.843578",
+            "created_at": "2024-10-29T12:49:10.843531",
+            "id": "b69131da-4646-49d4-90be-18d421d9480d",
+            "quiz_id": "7017c8c4-4569-4695-9932-eb97664d3305",
+            "question": "How can you handle errors when using async/await?",
+            "options": "['By using a try...catch block','By checking the status of the promise','By using the Promise.all() method','By using the .then() method']",
+            "answer": 0,
+            "__class__": "Question"
+        }
+    },
+    "92cc9bd1-d54c-4fa6-986f-f7d8946ddd28": {
+        "Question.af44f14e-5425-4473-b7eb-2b49fb8ca421": {
+            "updated_at": "2024-10-29T13:11:06.663757",
+            "created_at": "2024-10-29T13:11:06.663715",
+            "id": "af44f14e-5425-4473-b7eb-2b49fb8ca421",
+            "quiz_id": "92cc9bd1-d54c-4fa6-986f-f7d8946ddd28",
+            "question": "What is JavaScript primarily used for?",
+            "options": "['Styling web pages','Structuring web pages','Adding interactivity to web pages','Server-side scripting']",
+            "answer": 2,
+            "__class__": "Question"
+        },
+        "Question.d9dc3249-c039-4222-b484-ab0a8e77a3eb": {
+            "updated_at": "2024-10-29T13:11:06.665392",
+            "created_at": "2024-10-29T13:11:06.665360",
+            "id": "d9dc3249-c039-4222-b484-ab0a8e77a3eb",
+            "quiz_id": "92cc9bd1-d54c-4fa6-986f-f7d8946ddd28",
+            "question": "How do you create a variable in JavaScript?",
+            "options": "['var x = 10;','variable x = 10;','let x == 10;','int x = 10;']",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.e2e82a28-7fbb-4262-8b13-31b99cda056d": {
+            "updated_at": "2024-10-29T13:11:06.666237",
+            "created_at": "2024-10-29T13:11:06.666213",
+            "id": "e2e82a28-7fbb-4262-8b13-31b99cda056d",
+            "quiz_id": "92cc9bd1-d54c-4fa6-986f-f7d8946ddd28",
+            "question": "What does 'console.log()' do in JavaScript?",
+            "options": "['Displays data on the webpage','Logs data to the console','Saves data to a file','Sends data to the server']",
+            "answer": 1,
+            "__class__": "Question"
+        },
+        "Question.6b9c2158-06ee-4cf1-8bfe-2f3837cfa030": {
+            "updated_at": "2024-10-29T13:11:06.667030",
+            "created_at": "2024-10-29T13:11:06.667018",
+            "id": "6b9c2158-06ee-4cf1-8bfe-2f3837cfa030",
+            "quiz_id": "92cc9bd1-d54c-4fa6-986f-f7d8946ddd28",
+            "question": "Which of the following is a correct way to declare a function in JavaScript?",
+            "options": "['function myFunction() {}','function:myFunction() {}','myFunction() = function {};','function = myFunction() {};']",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.8d63071a-57ef-4086-ba6a-999e224ff429": {
+            "updated_at": "2024-10-29T13:11:06.668161",
+            "created_at": "2024-10-29T13:11:06.668138",
+            "id": "8d63071a-57ef-4086-ba6a-999e224ff429",
+            "quiz_id": "92cc9bd1-d54c-4fa6-986f-f7d8946ddd28",
+            "question": "What will the following code output: console.log(typeof \"Hello\");?",
+            "options": "['\"string\"','\"text\"','\"undefined\"','\"object\"']",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.1233fa8d-e3b1-4ee9-bbbd-afc4468b8e12": {
+            "updated_at": "2024-10-29T13:11:06.668966",
+            "created_at": "2024-10-29T13:11:06.668943",
+            "id": "1233fa8d-e3b1-4ee9-bbbd-afc4468b8e12",
+            "quiz_id": "92cc9bd1-d54c-4fa6-986f-f7d8946ddd28",
+            "question": "Which of the following is a JavaScript data type?",
+            "options": "['Number','String','Boolean','All of the above']",
+            "answer": 3,
+            "__class__": "Question"
+        },
+        "Question.a5ac6331-5f9a-488d-832a-33e117fec33c": {
+            "updated_at": "2024-10-29T13:11:06.669825",
+            "created_at": "2024-10-29T13:11:06.669802",
+            "id": "a5ac6331-5f9a-488d-832a-33e117fec33c",
+            "quiz_id": "92cc9bd1-d54c-4fa6-986f-f7d8946ddd28",
+            "question": "How can you add a comment in JavaScript?",
+            "options": "['// This is a comment','<!-- This is a comment -->','* This is a comment *','# This is a comment']",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.a44e3a47-bb7b-43dc-b9aa-ac6654ed087b": {
+            "updated_at": "2024-10-29T13:11:06.670798",
+            "created_at": "2024-10-29T13:11:06.670745",
+            "id": "a44e3a47-bb7b-43dc-b9aa-ac6654ed087b",
+            "quiz_id": "92cc9bd1-d54c-4fa6-986f-f7d8946ddd28",
+            "question": "What is the purpose of the 'if...else' statement in JavaScript?",
+            "options": "['To repeat a block of code','To execute code based on a condition','To declare a function','To create a loop']",
+            "answer": 1,
+            "__class__": "Question"
+        },
+        "Question.9c9e4369-e214-4408-9292-fbc98342ba08": {
+            "updated_at": "2024-10-29T13:11:06.671620",
+            "created_at": "2024-10-29T13:11:06.671593",
+            "id": "9c9e4369-e214-4408-9292-fbc98342ba08",
+            "quiz_id": "92cc9bd1-d54c-4fa6-986f-f7d8946ddd28",
+            "question": "What will the following code output: console.log(2 + '2');?",
+            "options": "['4','22','\"22\"','\"4\"']",
+            "answer": 2,
+            "__class__": "Question"
+        },
+        "Question.1242a0ec-6f2d-4a3e-b7c0-3a56ec48e71c": {
+            "updated_at": "2024-10-29T13:11:06.672593",
+            "created_at": "2024-10-29T13:11:06.672550",
+            "id": "1242a0ec-6f2d-4a3e-b7c0-3a56ec48e71c",
+            "quiz_id": "92cc9bd1-d54c-4fa6-986f-f7d8946ddd28",
+            "question": "Which of the following is the correct way to declare a variable?",
+            "options": "['var x;','variable x;','x = var;','declare x;']",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.ac30e227-55f9-4bb7-bd83-a4e052bd90b1": {
+            "updated_at": "2024-10-29T13:11:06.673629",
+            "created_at": "2024-10-29T13:11:06.673587",
+            "id": "ac30e227-55f9-4bb7-bd83-a4e052bd90b1",
+            "quiz_id": "92cc9bd1-d54c-4fa6-986f-f7d8946ddd28",
+            "question": "What does the 'break' statement do in a loop?",
+            "options": "['Exits the current loop','Continues to the next iteration','Restarts the loop','Stops the program']",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.868d37ef-4e07-46e8-84f4-535f2a8974ca": {
+            "updated_at": "2024-10-29T13:11:06.674609",
+            "created_at": "2024-10-29T13:11:06.674579",
+            "id": "868d37ef-4e07-46e8-84f4-535f2a8974ca",
+            "quiz_id": "92cc9bd1-d54c-4fa6-986f-f7d8946ddd28",
+            "question": "How do you create a function in JavaScript?",
+            "options": "['function myFunction() { }','create myFunction() { }','myFunction() = function { }','function:myFunction() { }']",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.a0726fe3-82b6-4c2c-a33e-4ed80dfaab47": {
+            "updated_at": "2024-10-29T13:11:06.675606",
+            "created_at": "2024-10-29T13:11:06.675572",
+            "id": "a0726fe3-82b6-4c2c-a33e-4ed80dfaab47",
+            "quiz_id": "92cc9bd1-d54c-4fa6-986f-f7d8946ddd28",
+            "question": "Which of the following is a valid way to create an array in JavaScript?",
+            "options": "['var myArray = [1, 2, 3];','var myArray = ( 1, 2, 3 );','var myArray = {1, 2, 3};','var myArray =< 1, 2, 3 >;']",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.51eccc7f-ce54-4562-b238-3d936c21c3df": {
+            "updated_at": "2024-10-29T13:11:06.678112",
+            "created_at": "2024-10-29T13:11:06.678068",
+            "id": "51eccc7f-ce54-4562-b238-3d936c21c3df",
+            "quiz_id": "92cc9bd1-d54c-4fa6-986f-f7d8946ddd28",
+            "question": "What does the 'typeof' operator do?",
+            "options": "['Determines the type of a variable','Changes the type of a variable','Returns a string representation of the variable','Both a and c']",
+            "answer": 3,
+            "__class__": "Question"
+        },
+        "Question.91fa977e-b7c7-49b7-9cb9-d45eb075e40b": {
+            "updated_at": "2024-10-29T13:11:06.694158",
+            "created_at": "2024-10-29T13:11:06.694104",
+            "id": "91fa977e-b7c7-49b7-9cb9-d45eb075e40b",
+            "quiz_id": "92cc9bd1-d54c-4fa6-986f-f7d8946ddd28",
+            "question": "What is the output of 'console.log(!!\"\");'?",
+            "options": "['true','false','undefined','null']",
+            "answer": 1,
+            "__class__": "Question"
+        },
+        "Question.8a5c3cf2-266a-44a9-818b-9032e9c4767c": {
+            "updated_at": "2024-10-29T13:11:06.695454",
+            "created_at": "2024-10-29T13:11:06.695415",
+            "id": "8a5c3cf2-266a-44a9-818b-9032e9c4767c",
+            "quiz_id": "92cc9bd1-d54c-4fa6-986f-f7d8946ddd28",
+            "question": "Which keyword is used to prevent further modification of an object?",
+            "options": "['const','let','final','freeze']",
+            "answer": 3,
+            "__class__": "Question"
+        },
+        "Question.29c2c779-a09d-448d-a751-6202ea9246f4": {
+            "updated_at": "2024-10-29T13:11:06.696639",
+            "created_at": "2024-10-29T13:11:06.696585",
+            "id": "29c2c779-a09d-448d-a751-6202ea9246f4",
+            "quiz_id": "92cc9bd1-d54c-4fa6-986f-f7d8946ddd28",
+            "question": "What will the following code output: console.log(1 == '1');?",
+            "options": "['true','false','TypeError','undefined']",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.40c8dbe4-a719-4936-8d78-d5d345b7982a": {
+            "updated_at": "2024-10-29T13:11:06.698036",
+            "created_at": "2024-10-29T13:11:06.697980",
+            "id": "40c8dbe4-a719-4936-8d78-d5d345b7982a",
+            "quiz_id": "92cc9bd1-d54c-4fa6-986f-f7d8946ddd28",
+            "question": "Which of the following statements is used to create a function in JavaScript?",
+            "options": "['function myFunction() { }','create function myFunction() { }','myFunction() => { }','function: myFunction() { }']",
+            "answer": 0,
+            "__class__": "Question"
+        },
+        "Question.75710ebe-c56a-4e6f-9d21-688053ea8cfa": {
+            "updated_at": "2024-10-29T13:11:06.699174",
+            "created_at": "2024-10-29T13:11:06.699135",
+            "id": "75710ebe-c56a-4e6f-9d21-688053ea8cfa",
+            "quiz_id": "92cc9bd1-d54c-4fa6-986f-f7d8946ddd28",
+            "question": "What will be the result of the following code: console.log('5' + 3);?",
+            "options": "['8','53','\"53\"','\"8\"']",
+            "answer": 2,
+            "__class__": "Question"
+        },
+        "Question.ddad0859-4dc8-4c9e-912c-f7f263923f48": {
+            "updated_at": "2024-10-29T13:11:06.700416",
+            "created_at": "2024-10-29T13:11:06.700353",
+            "id": "ddad0859-4dc8-4c9e-912c-f7f263923f48",
+            "quiz_id": "92cc9bd1-d54c-4fa6-986f-f7d8946ddd28",
+            "question": "Which method can be used to convert a string to a number in JavaScript?",
+            "options": "['parseInt()','Number()','Both a and b','toString()']",
+            "answer": 2,
+            "__class__": "Question"
+        }
+    }
+}

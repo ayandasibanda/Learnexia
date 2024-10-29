@@ -107,6 +107,11 @@ class FileStorage:
 
         if quiz_questions:
             for value in quiz_questions.values():
+                options = value.options[1:-1]
+
+                options = options.split(",")
+
+                value.options = options
                 questions.append(value.to_dict())
         return questions
 

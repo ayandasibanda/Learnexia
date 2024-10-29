@@ -1,4 +1,4 @@
-from itertools import count
+""" from itertools import count
 from flask import jsonify
 from models import User
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -55,3 +55,4 @@ def signup_user(data):
     db.session.commit()
 
     return jsonify({'message': 'User registered successfully', 'user': {'email': new_user.email, 'firstname': new_user.firstname}}), 201
+ """
