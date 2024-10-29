@@ -62,17 +62,6 @@ class DBStorage():
                 .filter(User.email == email).first()
             return user
         return None
-    
-    def reload(self):
-        """Reloads from the database"""
-        from sqlalchemy.orm import sessionmaker, scoped_session
-
-        Base.metadata.create_all(self.__engine)
-
-        session_factory = sessionmaker(
-            bind=self.__engine, expire_on_commit=False)
-        Session = scoped_session(session_factory)
-        self.__session = Session()
 
     def all(self, cls):
         """Lists all object of a class or
