@@ -1,57 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import axios from "axios";
 
 const CourseDetail = () => {
   const { id } = useParams();
+  const [course, setCourse] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  const courses = [
-    {
-      id: 1,
-      title: "Introduction to HTML & CSS",
-      description: "Learn the fundamentals of web development with HTML and CSS.",
-      level: "Beginner",
-      estimatedTime: "3 hours",
-      image: "/images/image7.jpg",
-      syllabus: [
-        "Basic HTML structure and elements",
-        "CSS styling and layouts",
-        "Building responsive web pages",
-        "Interactive elements with forms",
-      ],
-    },
-    {
-      id: 2,
-      title: "JavaScript Basics",
-      description: "Get started with JavaScript programming.",
-      level: "Beginner",
-      estimatedTime: "4 hours",
-      image: "/images/image12.jpg",
-      syllabus: [
-        "Variables and data types",
-        "Control structures and loops",
-        "Functions and scope",
-        "DOM manipulation",
-      ],
-    },
-    {
-      id: 3,
-      title: "Advanced JavaScript",
-      description: "Deep dive into advanced JavaScript concepts.",
-      level: "Advanced",
-      estimatedTime: "6 hours",
-      image: "/images/profile1.jpg",
-      syllabus: [
-        "Closures and callbacks",
-        "Promises and async/await",
-        "Higher-order functions",
-        "Event handling in JavaScript",
-      ],
-    },
-  ];
+  useEffect(() => {
+    const fetchCourse = async () => {
+      try {
+        const response = await axios.get(`/api/v1/courses/${id}`);
+        setCourse(response.data);
+      } catch (error) {
+        console.error("Error fetching course data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const course = courses.find((course) => course.id === parseInt(id));
+    fetchCourse();
+  }, [id]);
+
+  if (loading) {
+    return <div className="text-center text-gray-500 mt-10">Loading...</div>;
+  }
 
   if (!course) {
     return <div className="text-center text-gray-500 mt-10">Course not found!</div>;
@@ -101,9 +76,9 @@ const CourseDetail = () => {
               </ul>
             </div>
 
-
             <div className="mt-8 flex justify-center">
-              <Link to={`/courses/${course.id}/lessons/1`}
+              <Link
+                to={`/courses/${course.id}/lessons/1`}
                 className="bg-indigo-600 text-white py-3 px-6 rounded-full text-lg font-semibold hover:bg-indigo-800 transition-transform transform hover:scale-105"
               >
                 Enroll Now
