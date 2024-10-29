@@ -16,7 +16,7 @@ const LessonPage = () => {
   const navigate = useNavigate();
   
   const courses = {
-    1: {
+    "f6b4981b-815a-4abd-b107-c231eb097c22" : {
       lessons: {
         1: <Lesson1 />, 
         2: <Lesson2 />,
@@ -24,7 +24,7 @@ const LessonPage = () => {
         4: <Lesson4 />,
       }
     },
-    2: {
+    "0b206260-38f5-4748-aef7-d7fb74b6bae7" : {
       lessons: {
         1: <Lesson5 />,
         2: <Lesson6 />,
