@@ -1,17 +1,18 @@
-#!/usr/bin/python3
 """My console environment"""
 
 import cmd
 from datetime import datetime
 import shlex
+from models.question import Question
 from models.user import User
 from dotenv import load_dotenv
-from models.base_model import BaseModel, Base
+""" from models.base_model import BaseModel, Base
+from models.completion import Completion """
+from models.course import Course
+from models.quiz import Quiz
+from models.user import User
 
-cls_lst = [User]
-
-classes = {"User": User}
-
+classes = {"User": User, 'Course': Course, 'Quiz': Quiz, 'Question': Question}
 
 class HBNBCommand(cmd.Cmd):
     """Class inheriting from the cmd.Cmd"""
@@ -28,43 +29,46 @@ class HBNBCommand(cmd.Cmd):
     def emptyline(self):
         pass
 
+    def _key_value_parser(self, args):
+        """creates a dictionary from a list of strings"""
+        new_dict = {}
+        for arg in args:
+            if "=" in arg:
+                kvp = arg.split('=', 1)
+                key = kvp[0]
+                value = kvp[1]
+                if value[0] == "[" and value[-1] == "]":
+                    list_items = value[1:-1].split(",")
+                    clean_list = [item.strip().replace("_", " ").strip(' "') for item in list_items]
+                    value = clean_list
+                elif value[0] == value[-1] == '"':
+                    value = shlex.split(value)[0].replace('_', ' ')
+                else:
+                    try:
+                        value = int(value)
+                    except:
+                        try:
+                            value = float(value)
+                        except:
+                            continue
+                new_dict[key] = value
+        return new_dict
+
     def do_create(self, args):
         """ Create an object of any class"""
-        from models.user import User
-        from models import storage
-
-        classes = {"User": User}
-
-        args_lst = args.split(" ")
-        class_name = args_lst[0]
-
-        if not class_name:
+        """Creates a new instance of a class"""
+        args = args.split()
+        if len(args) == 0:
             print("** class name missing **")
-            return
-
-        if class_name not in classes:
+            return False
+        if args[0] in classes:
+            new_dict = self._key_value_parser(args[1:])
+            instance = classes[args[0]](**new_dict)
+        else:
             print("** class doesn't exist **")
-            return
-
-        new_instance = classes[class_name]()
-
-        for item in args_lst[1:]:
-            if '=' in item:
-                key, value = item.split('=', 1)
-                if value.startswith('"') and value.endswith('"'):
-                    value = value.strip('"').replace('_', ' ')
-                elif '.' in value:
-                    value = float(value)
-                elif key == "date_of_birth":
-                    value = datetime.strptime(value, "%Y-%m-%d").date()
-                else:
-                    value = int(value)
-
-                setattr(new_instance, key, value)
-
-        storage.new(new_instance)
-        print(new_instance.id)
-        storage.save()
+            return False
+        print(instance.id)
+        instance.save()
 
     def do_all(self, line):
         """Lists all objs based on class"""

@@ -3,11 +3,12 @@
 """
 
 from api.v1.views import app_views
+from api.v1.logic.questions import fetch_quiz_questions
 from models.course import Course
 from models.quiz import Quiz
 from models import storage
 from flask import jsonify, abort, request
-from api.v1.logic.questions import fetch_quiz_questions
+""" from api.v1.logic.questions import fetch_quiz_questions """
 
 @app_views.route('/quizzes', methods=['GET'], strict_slashes=False)
 def get_all_quizzes() -> str:
@@ -37,13 +38,12 @@ def view_one_quiz(quiz_id: str = None) -> str:
 @app_views.route('/quizzes/<quiz_id>/questions', methods=['GET'],
                  strict_slashes=False)
 def get_quiz_questions(quiz_id):
-    """Get questions related to quiz
+    """ Get questions related to quiz
     Params:
         quiz_id: the QUIZ ID
     Returns:
         An array of dicts
-        otherwise empty array
-    """
+        otherwise empty array """
     return fetch_quiz_questions(quiz_id)
 
 @app_views.route('/courses/<course_id>/quizzes', methods=['GET'],
@@ -54,14 +54,13 @@ def get_quizzes_for_course(course_id):
     of a specific Quiz, or a specific city
     """
     list_quizzes = []
-    course = storage.get(Course, course_id)
+    course = storage.get_instance(Course, course_id)
 
-    lessons = course.lessons
-    if not lessons:
+    quizzes = course.quizzes
+    if not quizzes:
         abort(404)
-    for lesson in course.lessons:
-        for quiz in lesson.quizzes:
-            list_quizzes.append(quiz)
+    for quiz in quizzes:
+        list_quizzes.append(quiz.to_dict())
     
     return jsonify(list_quizzes), 200
 
@@ -81,8 +80,7 @@ def create_quiz():
 
     errors = [' title',
               'description ',
-              'duration',
-              'lesson_id']
+              'duration']
 
     if not quiz_data:
         abort(400, 'Missing information')
@@ -101,7 +99,7 @@ def create_quiz():
             return jsonify(new_quiz.to_dict()), 200
         except Exception as e:
             print(e)
-            error_msg = "Can't create Lesson: {}".format(e)
+            error_msg = "Can't create Quiz: {}".format(e)
     return jsonify({'error': error_msg}), 400
 
 
@@ -109,10 +107,10 @@ def create_quiz():
 def delete_quiz(quiz_id: str = None) -> str:
     """ DELETE /api/v1/quiz/:id
     URI Parameter:
-      quiz_id - Lesson ID
+      quiz_id - Quiz ID
     Return:
-      - empty JSON is the Lesson has been correctly deleted
-      - 404 if the Lesson ID doesn't exist
+      - empty JSON is the Quiz has been correctly deleted
+      - 404 if the Quiz ID doesn't exist
     """
     if quiz_id is None:
         abort(404)

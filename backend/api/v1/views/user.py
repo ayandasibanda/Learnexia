@@ -15,7 +15,7 @@ def view_all_users() -> str:
     Return:
       - list of all User objects JSON represented
     """
-    all_users = storage.all(User) #this is a dict
+    all_users = storage.all(User)
     return jsonify(all_users), 200
 
 

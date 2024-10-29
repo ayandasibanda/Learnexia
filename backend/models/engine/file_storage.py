@@ -27,25 +27,25 @@ class FileStorage:
             return new_dict """
         return self.__objects
 
-    def new(self, obj):
-        """sets in __objects the obj with key <obj class name>.id"""
-        if obj is not None:
+    def new(self, obj=None):
+        """Adds an object to __objects"""
+        if obj:
             quiz_key = obj.quiz_id
-            if self.__objects.get(quiz_key):
-                questions_dict = self.__objects.get(quiz_key)
-                key = obj.__class__.__name__ + "." + obj.id
-                questions_dict[key] = obj
-            else:
-                question = {obj.__class__.__name__ + "." + obj.id: obj}
-                self.__objects[quiz_key] = question
+            key = f"{obj.__class__.__name__}.{obj.id}"
+            
+            if quiz_key not in self.__objects:
+                self.__objects[quiz_key] = {}
+
+            self.__objects[quiz_key][key] = obj
 
     def save(self):
         """serializes __objects to the JSON file (path: __file_path)"""
         json_objects = {}
         for key in self.__objects:
             questions = self.__objects[key]
+            print(questions)
             temp = {}
-            for k, v in questions:
+            for k, v in questions.items():
                 temp[k] = v.to_dict()
             json_objects[key] = temp
         with open(self.__file_path, 'w') as f:
@@ -61,7 +61,7 @@ class FileStorage:
                     # val is an dictionary of questions
                     #Converting all questions to an obj
                     new_dict = {}
-                    for question_id, question in val:
+                    for question_id, question in val.items():
                         new_dict[question_id] = Question(**question)
                     temp_dict[key] = new_dict
                 self.__class__.__objects = temp_dict

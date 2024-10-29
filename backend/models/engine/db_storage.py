@@ -7,13 +7,12 @@ from dotenv import load_dotenv
 from models.base_model import Base
 from models.completion import Completion
 from models.course import Course
-from models.lesson import Lesson
 from models.quiz import Quiz
 from models.user import User
 
 load_dotenv()
 
-cls_lst = [User, Course, Lesson, Quiz, Completion]
+cls_lst = [User, Course, Quiz, Completion]
 
 class DBStorage():
     """MySql database connection class"""
@@ -90,6 +89,11 @@ class DBStorage():
                     del value['_sa_instance_state']
                 if value.get('__class__'):
                     del value['__class__']
+                if value.get('syllabus'):
+                    data = value.get('syllabus')
+                    syllabus_str = data[1: -1]
+                    syllabus_lst = syllabus_str.split(',')
+                    value['syllabus'] = syllabus_lst
                 my_dict.update({key: value})
         else:
             for cls in cls_lst:
@@ -102,6 +106,11 @@ class DBStorage():
                         del value['_sa_instance_state']
                     if value.get('__class__'):
                         del value['__class__']
+                    if value.get('syllabus'):
+                        data = value.get('syllabus')
+                        syllabus_str = data[1: -1]
+                        syllabus_lst = syllabus_str.split(',')
+                        value['syllabus'] = syllabus_lst
                     my_dict.update({key: value})
 
         return my_dict

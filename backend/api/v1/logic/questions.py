@@ -8,6 +8,7 @@ def fetch_quiz_questions(quiz_id):
     Returns:
         an array of dicts
     """
-    from models.engine.file_storage import FileStorage as f_storage
+    from models.engine.file_storage import FileStorage
+    f_storage = FileStorage()
 
     return f_storage.get_questions(quiz_id)

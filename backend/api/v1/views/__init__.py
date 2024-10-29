@@ -13,5 +13,4 @@ from api.v1.views.course import *
 from api.v1.views.enrollments import *
 from api.v1.views.index import *
 from api.v1.views.leaderboard import *
-from api.v1.views.lesson import *
 from api.v1.views.quiz import *

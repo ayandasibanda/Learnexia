@@ -7,7 +7,6 @@ from models.completion import Completion
 from models.course import Course
 from models.quiz import Quiz
 from models.quiz_taken import QuizAttempt
-from models.lesson import Lesson
 from models import storage
 from flask import jsonify, abort, request
 from models.user import User
@@ -20,6 +19,7 @@ def submit_quiz():
     if not quiz_data:
         abort(400, 'Missing information')
     user_id = quiz_data.get('user_id')
+    course_id = quiz_data.get('course_id')
     quiz_id = quiz_data.get('quiz_id')
     score = quiz_data.get('score')
 
@@ -29,10 +29,13 @@ def submit_quiz():
         return jsonify({"error": "Missing course ID"}), 404
     if not score:
         return jsonify({"error": "Missing score"}), 404
-    
-    quiz_attempt = QuizAttempt(**{'user_id': user_id,
-                           'quiz_id': quiz_id,
-                           'score': score})
+    if not course_id:
+        return jsonify({"error": "Missing course ID"}), 404
+
+    quiz_attempt = QuizAttempt(**{'user_id': user_id, 
+                                  'course_id': course_id,
+                                  'quiz_id': quiz_id,
+                                  'score': score})
     storage.new(quiz_attempt)
     storage.save()
 
@@ -41,11 +44,7 @@ def submit_quiz():
         if not quiz:
             return jsonify({"error": "Quiz not found"}), 404
 
-        lesson = storage.get(Lesson, quiz.lesson_id)
-        if not lesson:
-            return jsonify({"error": "Lesson not found"}), 404
-
-        course = storage.get(Course, lesson.course_id)
+        course = storage.get(Course, quiz.course_id)
         if not course:
             return jsonify({"error": "Course not found"}), 404
 

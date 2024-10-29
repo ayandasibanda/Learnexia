@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-""" Module of Lesson views
+""" Module for courses endpoints
 """
 
 from api.v1.views import app_views
 from models.course import Course
-from models.lesson import Lesson
 from models import storage
 from flask import jsonify, abort, request
 
@@ -15,6 +14,7 @@ def view_all_coursess() -> str:
       - list of all Course objects JSON represented
     """
     all_courses = storage.all(Course) #this is a dict
+
     return jsonify(all_courses), 200
 
 @app_views.route('/courses/<course_id>', methods=['GET'], strict_slashes=False)
@@ -78,7 +78,7 @@ def create_course():
     
     if not error_msg:
         try:
-            new_course = Lesson(**course_data)
+            new_course = Course(**course_data)
             storage.new(new_course)
             storage.save()
             return jsonify(new_course.to_dict()), 200
@@ -94,7 +94,7 @@ def update_course(course_id):
               'description',
               'duration']
 
-    course = storage.get(Lesson, course_id)
+    course = storage.get(Course, course_id)
 
     if not course:
         abort(404)

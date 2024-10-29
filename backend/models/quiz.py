@@ -2,7 +2,7 @@
 """ Courses class """
 
 from models.base_model import BaseModel, Base
-from sqlalchemy import ForeignKey, String, Column
+from sqlalchemy import ForeignKey, Integer, String, Column
 from sqlalchemy.orm import relationship
 
 
@@ -14,8 +14,8 @@ class Quiz(BaseModel, Base):
 
     title = Column(String(128), nullable=False)
     description = Column(String(128), nullable=False)
-    time_limit = Column(String(60), nullable=False)
-    lesson_id = Column(String(60), ForeignKey('lessons.id'), nullable=False)
+    time_limit = Column(Integer, nullable=False, default=0)
+    course_id = Column(String(60), ForeignKey('courses.id'), nullable=False)
 
     user_attempts = relationship('QuizAttempt', backref='quizzes', cascade="all, delete-orphan")
 

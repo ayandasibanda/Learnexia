@@ -25,7 +25,7 @@ class User(BaseModel, Base):
 
     session = relationship('UserSession', backref='user_session', cascade="all, delete-orphan")
 
-    courses = relationship('Course', secondary='enrollments', backref='user_courses', viewonly=False)
+    courses = relationship('Course', secondary='enrollments', backref='user_courses', viewonly=False, overlaps="user_courses, enrolled_courses")
 
     quizzes_taken = relationship('QuizAttempt', backref='quiz_users', cascade="all, delete-orphan")
 

@@ -26,23 +26,18 @@ class Course(BaseModel, Base):
     title = Column(String(128), nullable=False)
     description = Column(String(128), nullable=False)
     duration = Column(String(60), nullable=False)
-    lessons = relationship('Lesson', backref='courses', 
+    level = Column(String(60), nullable=False)
+    image = Column(String(100), nullable=False, default="images/course_placehoder")
+    syllabus = Column(String(255), nullable=True)
+    
+
+    quizzes = relationship('Quiz', backref='courses', 
                           cascade="all, delete-orphan")
 
     users = relationship('User', secondary='enrollments', 
-                         backref='enrolled_courses', viewonly=False)
+                         backref='enrolled_courses', viewonly=False,
+                         overlaps="courses, user_courses")
 
     def __init__(self, *args, **kwargs):
         """Instantiates a class object"""
         super().__init__(*args, **kwargs)
-
-    def get_quizzes(self):
-        """Gets the quizzes linked to courses"""
-        course_quizzes = []
-
-        lessons = self.lessons
-
-        for lesson in lessons:
-            course_quizzes.append(lesson.quizzes)
-
-        return course_quizzes
