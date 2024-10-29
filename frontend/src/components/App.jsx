@@ -10,6 +10,7 @@ import Login from "./Auth/Login";
 import SignUp from "./Auth/Signup";
 import AboutUs from "./About";
 
+
 const App = () => {
     return (
         <Router>
