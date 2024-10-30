@@ -11,6 +11,8 @@ const Login = () => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
+  const url = 'http://localhost:5000/api/v1';
+
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
@@ -22,11 +24,11 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('/api/login', formData);
+      const response = await axios.post(`${url}/auth_session/login`, formData);
       
       if (response.status === 200) {
         console.log('Login successful', response.data);
-        navigate('/Homepage');
+        navigate('/');
       }
     } catch (error) {
       setError(error.response ? error.response.data.message : "Login failed");

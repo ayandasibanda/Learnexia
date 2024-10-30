@@ -8,7 +8,7 @@ from models.course import Course
 from models.quiz import Quiz
 from models import storage
 from flask import jsonify, abort, request
-""" from api.v1.logic.questions import fetch_quiz_questions """
+from api.v1.logic.questions import fetch_quiz_questions
 
 @app_views.route('/quizzes', methods=['GET'], strict_slashes=False)
 def get_all_quizzes() -> str:

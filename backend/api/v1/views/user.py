@@ -85,6 +85,11 @@ def create_user():
     for key in errors:
         if not (user_info.get(key)):
             error_msg = "Missing {}".format(key)
+
+    check_user = storage.get_user_by_email(email=user_info['email'])
+
+    if check_user:
+        return({'error': 'User already registered'}), 400
     
     if not error_msg:
         passwd = user_info['password']

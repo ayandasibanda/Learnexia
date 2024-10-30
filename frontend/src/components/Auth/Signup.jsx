@@ -24,11 +24,13 @@ const SignUp = () => {
     });
   };
 
+  const url = 'http://localhost:5000/api/v1';
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('/api/signup', formData);
+      const response = await axios.post(`${url}/users`, formData);
       
       if (response.status === 200) {
         console.log('Registration successful', response.data);
