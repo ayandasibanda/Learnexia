@@ -3,6 +3,7 @@
 Contains the FileStorage class
 """
 
+import ast
 import json
 from models.question import Question
 
@@ -107,12 +108,35 @@ class FileStorage:
 
         if quiz_questions:
             for value in quiz_questions.values():
-                options = value.options[1:-1]
+                value = value.to_dict()
 
-                options = options.split(",")
+                if value.get('id') == 'a0726fe3-82b6-4c2c-a33e-4ed80dfaab47':
+                    options = value.get('options')
+                    options = options[1:-1]
+                    new_arr = []
+                    idx = 0
+                    value_str = ''
+                    while options[idx]:
+                        if idx == len(options) - 1:
+                            break
+                        if options[idx] == "'":
+                            if (options[idx + 1] and options[idx + 1]  == ','):
+                                new_arr.append(value_str)
+                                value_str = ''
+                                idx += 1
+                        else:
+                            value_str += options[idx]
+                        idx += 1
+                    value['options'] = new_arr
 
-                value.options = options
-                questions.append(value.to_dict())
+                else:
+                    if value.get('options'):
+                        options = value.get('options')
+                        options = options[1:-1]
+                        options = options.split(",")
+                        value['options'] = options
+
+                questions.append(value)
         return questions
 
 
