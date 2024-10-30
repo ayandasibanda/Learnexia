@@ -16,6 +16,7 @@ const Courses = () => {
                 if (response.data) {
                     const arr = [];
                     for (const [key, value] of Object.entries(response.data)) {
+                        console.log(key, value)
                         arr.push(value);
                     }
                     setCourses(arr);

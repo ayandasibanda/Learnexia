@@ -3,7 +3,6 @@
 """
 
 from api.v1.views import app_views
-from api.v1.logic.questions import fetch_quiz_questions
 from models.course import Course
 from models.quiz import Quiz
 from models import storage

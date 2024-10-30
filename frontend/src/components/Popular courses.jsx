@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const PopularCourses = () => {
     const courses = [
-        { id: 1, title: "Introduction to HTML & CSS", description: "Learn the fundamentals of web development with HTML and CSS to create basic web pages.", level: "Beginner", estimatedTime: "3 hours", image: "images/image7.jpg" },
-        { id: 2, title: "JavaScript Basics", description: "Get started with JavaScript programming and learn to make your web pages interactive.", level: "Beginner", estimatedTime: "4 hours", image: "images/image12.jpg" },
-        { id: 3, title: "Advanced JavaScript", description: "Deep dive into advanced JavaScript concepts such as closures, callbacks, and promises.", level: "Advanced", estimatedTime: "6 hours", image: "images/profile1.jpg" },
+        { id: 'f6b4981b-815a-4abd-b107-c231eb097c22', title: "Introduction to HTML & CSS", description: "Learn the fundamentals of web development with HTML and CSS to create basic web pages.", level: "Beginner", estimatedTime: "3 hours", image: "images/image7.jpg" },
+        { id: '0b206260-38f5-4748-aef7-d7fb74b6bae7', title: "JavaScript Basics", description: "Get started with JavaScript programming and learn to make your web pages interactive.", level: "Beginner", estimatedTime: "4 hours", image: "images/image12.jpg" },
+        { id: '585dfc68-5271-417a-b83e-466362c7b6f1', title: "Advanced JavaScript", description: "Deep dive into advanced JavaScript concepts such as closures, callbacks, and promises.", level: "Advanced", estimatedTime: "6 hours", image: "images/profile1.jpg" },
         { id: 4, title: "React for Beginners", description: "Learn how to build dynamic user interfaces using React, one of the most popular front-end frameworks.", level: "Beginner", estimatedTime: "5 hours", image: "images/image6.jpg" },
         { id: 5, title: "React Advanced", description: "Master complex React patterns like hooks, context, and state management with Redux.", level: "Advanced", estimatedTime: "7 hours", image: "images/image14.jpg" },
         { id: 6, title: "Node.js Basics", description: "Learn to build server-side applications using Node.js and JavaScript.", level: "Intermediate", estimatedTime: "6 hours", image: "images/image10.jpg" },

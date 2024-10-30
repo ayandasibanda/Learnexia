@@ -27,7 +27,6 @@ const QuizPage = () => {
 
         const questionsResponse = await axios.get(`${url}/quizzes/${quizId}/questions`);
 
-        console.log(questionsResponse.data);
         setQuestions(questionsResponse.data);
         
       } catch (error) {
@@ -107,7 +106,7 @@ const QuizPage = () => {
                   {index + 1}. {question.question}
                 </h2>
                 <div className="mt-2">
-                  {question.options.map((option, optionIndex) => (
+                  {question.options && question.options.map((option, optionIndex) => (
                     <label key={optionIndex} className="block">
                       <input
                         type="radio"

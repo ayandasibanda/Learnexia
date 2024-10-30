@@ -6,7 +6,7 @@
             "id": "1957ab0b-5654-4c87-9ec6-f5dfd87c6549",
             "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
             "question": "Which of the following is the correct HTML structure for a web page?",
-            "options": "[<html> <head> </head> <body> </body> </html>, <html> <body> </body> <head> </head> </html>, <body> <html> </html> <head> </head> <body>]",
+            "options": "['<html><head></head><body></body></html>','<html><body></body><head></head></html>','<body><html></html><head></head><body>']",
             "answer": 0,
             "__class__": "Question"
         },
@@ -26,6 +26,7 @@
             "id": "0c6fe56e-81d2-4770-b187-7f00297410b9",
             "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
             "question": "What is the correct way to link an external CSS file?",
+            "options": "['<link rel=\"stylesheet\" href=\"styles.css\">','<stylesheet href=\"styles.css\">','<link src=\"styles.css\">']",
             "answer": 0,
             "__class__": "Question"
         },
@@ -95,6 +96,7 @@
             "id": "90705d5a-2463-4e3d-b43b-17ae5ab33dcc",
             "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
             "question": "How do you create a hyperlink in HTML?",
+            "options": "['<a href=\"url\">link text</a>','<link href=\"url\">link text</link>','<hyperlink href=\"url\">link text</hyperlink>']",
             "answer": 0,
             "__class__": "Question"
         },
@@ -164,6 +166,7 @@
             "id": "9bbad68f-735d-4500-b347-c9c8e5a0c0d5",
             "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
             "question": "Which of the following is a valid way to link an external CSS file?",
+            "options": "['<link rel=\"stylesheet\" href=\"styles.css\">','<css src=\"styles.css\">','<stylesheet href=\"styles.css\">']",
             "answer": 0,
             "__class__": "Question"
         },
@@ -193,6 +196,7 @@
             "id": "328beaa7-e4c1-4b53-9dc7-6aec4cfe0f59",
             "quiz_id": "2cdfb2f0-90f3-4aff-92c0-d73855d674a9",
             "question": "How can you create a hyperlink in HTML?",
+            "options": "['<a href=\"https://example.com\">Link</a>','<link href=\"https://example.com\">Link</link>','<hyperlink href=\"https://example.com\">Link</hyperlink>']",
             "answer": 0,
             "__class__": "Question"
         }
