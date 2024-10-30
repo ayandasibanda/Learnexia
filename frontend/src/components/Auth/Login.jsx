@@ -28,7 +28,7 @@ const Login = () => {
       
       if (response.status === 200) {
         console.log('Login successful', response.data);
-        navigate('/Homepage');
+        navigate('/');
       }
     } catch (error) {
       setError(error.response ? error.response.data.message : "Login failed");
