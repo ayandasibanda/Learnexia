@@ -16,6 +16,18 @@
 
 ---
 
+## 🌐 Platform Preview
+
+Explore the Learnexia homepage to get a feel for the platform's welcoming interface, which serves as the gateway to your learning journey:
+
+![Learnexia Homepage](https://github.com/user-attachments/assets/323bb4db-bf5e-4970-8bbf-9759fd0b2103)
+
+Dive into a wide selection of available courses designed to enhance your learning experience with structured, interactive content:
+
+![Courses Available](https://github.com/user-attachments/assets/8aa1638d-7323-457d-a621-fad495e8a5b1)
+
+---
+
 ## 🛠 Technologies
 
 ### Backend
