@@ -20,7 +20,7 @@
 
 Explore the Learnexia homepage to get a feel for the platform's welcoming interface, which serves as the gateway to your learning journey:
 
-![Learnexia Homepage](https://github.com/user-attachments/assets/323bb4db-bf5e-4970-8bbf-9759fd0b2103)
+![Learnexia Homepage](https://github.com/user-attachments/assets/cf2e949b-101f-4f8f-9a57-5d92a3efa240)
 
 Dive into a wide selection of available courses designed to enhance your learning experience with structured, interactive content:
 
